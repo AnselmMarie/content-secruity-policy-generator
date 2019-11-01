@@ -1,6 +1,8 @@
 /* Node Modules */
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+/* Data Store */
+import store from '../../data.store/reducers';
 /* Routes */
 import startRoute from '../start.route';
 import defaultRoute from '../default.route';
@@ -9,7 +11,7 @@ import errRoute from '../err.route';
 
 export default () => {
   return(
-    <div>
+    <Provider store={store}>
       <div className="main-area">
         <Router>
           <Switch>
@@ -25,6 +27,6 @@ export default () => {
           </Switch>
         </Router>
       </div>
-    </div>
+    </Provider>
   );
 }
