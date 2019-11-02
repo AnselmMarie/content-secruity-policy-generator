@@ -1,0 +1,15 @@
+main {
+
+  display: flex;
+
+  .side-area {
+    min-width: 300px;
+    height: 100vh;
+  }
+
+  .main-area {
+    min-width: 900px;
+    height: 100vh;
+  }
+
+}

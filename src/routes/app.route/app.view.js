@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 /* Components */
 import NavigationComponent from '../../components/navigation.component';
 import RouteComponent from '../../components/route.component';
+import MainHeaderComponent from '../../components/main.header.component';
 /* Data Store */
 import store from '../../data.store/reducers';
 
@@ -16,7 +17,12 @@ export default () => {
           <NavigationComponent />
         </aside>
         <div className="main-area">
-          <RouteComponent />
+          <header>
+            <MainHeaderComponent />
+          </header>
+          <section className="section-area">
+            <RouteComponent />
+          </section>
         </div>
       </Router>
     </Provider>
