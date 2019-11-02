@@ -5,5 +5,5 @@ export default {
   DATA: 'data',
   UNSAFE_INLINE: 'unsafe inline',
   UNSAFE_HASHES: 'unsafe hashes',
-  UNSAFE_EVAL: 'unsafe eval'
+  UNSAFE_EVAL: 'unsafe eval',
 }

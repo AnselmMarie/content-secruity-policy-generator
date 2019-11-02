@@ -1,3 +1,6 @@
+/* Configs */
+import cspConst from '../../../configs/constants/csp.name.constants';
+
 /**
  * @property scriptState
  * @desc Init script data
@@ -6,31 +9,31 @@
 const scriptState  = {
   generalData: [
     {
-      name: WILDCARD,
+      name: cspConst.WILDCARD,
       val: false,
     },
     {
-      name: NONE,
+      name: cspConst.NONE,
       val: false,
     },
     {
-      name: SELF,
+      name: cspConst.SELF,
       val: false,
     },
     {
-      name: DATA,
+      name: cspConst.DATA,
       val: false,
     },
     {
-      name: UNSAFE_INLINE,
+      name: cspConst.UNSAFE_INLINE,
       val: false,
     },
     {
-      name: UNSAFE_HASHES,
+      name: cspConst.UNSAFE_HASHES,
       val: false,
     },
     {
-      name: UNSAFE_EVAL,
+      name: cspConst.UNSAFE_EVAL,
       val: false,
     }
   ],
