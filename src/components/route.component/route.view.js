@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 /* Routes */
 import defaultRoute from '../../routes/default.route';
-import summaryRoute from '../../routes/summary.route';
+import generateRoute from '../../routes/generate.route';
 import errRoute from '../../routes/err.route';
 
 export default ($this) => {
@@ -15,7 +15,7 @@ export default ($this) => {
       <Route exact path="/script-src" component={} />
       <Route exact path="/frame-src" component={} />
       <Route exact path="/font-src" component={} /> */}
-      <Route exact path="/summary" component={summaryRoute} />
+      <Route exact path="/generate" component={generateRoute} />
       <Route component={errRoute} />
   </Switch>
   )
