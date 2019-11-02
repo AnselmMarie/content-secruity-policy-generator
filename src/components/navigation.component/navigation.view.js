@@ -9,8 +9,7 @@ export default ($this) => {
     <nav>
       <ul>
         {NavLinks.map((el, i) => {
-          const key = `${el.name}-link`;
-          return <li key={key}><NavLink to={el.path}>{el.name}</NavLink></li>;
+          return <li key={i}><NavLink to={el.path}>{el.name}</NavLink></li>;
         })}
       </ul>
     </nav>

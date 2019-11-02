@@ -5,7 +5,13 @@ import HeadingComponent from '../../components/heading.component';
 import GeneralSettingsComponent from '../../components/general.settings.component';
 import CustomUrlComponent from '../../components/custom.urls.component';
 
-export default () => {
+/**
+ * @function General Settings
+ * @desc rendering the view for the default route
+ * @author Anselm Marie
+ * @param {object} props - global property data
+ */
+export default (props) => {
   return(
     <>
 
@@ -13,8 +19,11 @@ export default () => {
         Default Source Content
       </HeadingComponent>
 
-      <GeneralSettingsComponent />
-      <CustomUrlComponent />
+      <GeneralSettingsComponent
+        generalData={props.defaultData.generalData} />
+
+      <CustomUrlComponent
+        customData={props.defaultData.customData} />
 
     </>
   );

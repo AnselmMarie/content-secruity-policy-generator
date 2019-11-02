@@ -10,31 +10,31 @@ const styleState  = {
   generalData: [
     {
       name: cspConst.WILDCARD,
-      val: false,
+      checked: false,
     },
     {
       name: cspConst.NONE,
-      val: false,
+      checked: false,
     },
     {
       name: cspConst.SELF,
-      val: false,
+      checked: false,
     },
     {
       name: cspConst.DATA,
-      val: false,
+      checked: false,
     },
     {
       name: cspConst.UNSAFE_INLINE,
-      val: false,
+      checked: false,
     },
     {
       name: cspConst.UNSAFE_HASHES,
-      val: false,
+      checked: false,
     },
     {
       name: cspConst.UNSAFE_EVAL,
-      val: false,
+      checked: false,
     }
   ],
   customData: []
