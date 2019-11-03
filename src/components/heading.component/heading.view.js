@@ -5,7 +5,7 @@ import React from 'react';
  * @desc Render the correct heading based on property given
  * @author Anselm Marie
  * @param {object} props - props sent from parent component
- * @return {object} JSX.element
+ * @return {JSX.Element} 
  */
 const renderHeading = (props) => {
   switch (props.heading) {

@@ -14,7 +14,6 @@ import CustomUrlComponent from '../../components/custom.urls.component';
  * @param {object} props - global property data
  */
 export default (props) => {
-  console.log('props.defaultGeneral', props.defaultGeneral);
   return(
     <>
 
@@ -28,6 +27,8 @@ export default (props) => {
         generalData={props.defaultGeneral} />
 
       <CustomUrlComponent
+        type={DEFAULT_SRC}
+        modifyUrl={props.modifyUrl}
         customData={props.defaultCustom} />
 
     </>

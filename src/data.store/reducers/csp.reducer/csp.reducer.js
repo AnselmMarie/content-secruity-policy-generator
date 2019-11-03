@@ -26,7 +26,7 @@ import {
   FONT_DELETE_URL,
 } from '../../actions/action.constants';
 /* Modules */
-import { updateChecked } from '../../../modules/redux.helper.module';
+import { updateChecked, updateUrl } from '../../../modules/redux.helper.module';
 /* Reducer Content */
 import initState from './csp.state';
 
@@ -39,22 +39,24 @@ import initState from './csp.state';
  * @return {object}
  */
 export default (state = initState, action) => {
-console.log('action', action);
+  console.log('action.type', action.type);
   const data = action.data;
 
   /**** DEFAULT-SRC ***/
   switch (action.type) {
     case (DEFAULT_MODIFY_CHECKBOX):
-      const obj = updateChecked(state, data);
+      const default1 = updateChecked(state, data, 'defaultGeneral');
 
-      if (obj.currentObj.name === data.name) {
-        return { ...state, defaultGeneral: obj.clonedData };
+      if (default1.currentObj.name === data.name) {
+        return { ...state, defaultGeneral: default1.clonedData };
       } else {
         console.log('ERROR IN DATA BEING UPDATED');
       }
 
     case (DEFAULT_MODIFY_URL):
-      return;
+      const default2 = updateUrl(state, data, 'defaultCustom');
+      return { ...state, defaultCustom: default2.clonedData };
+
     case (DEFAULT_ADD_URL):
       return;
     case (DEFAULT_DELETE_URL):

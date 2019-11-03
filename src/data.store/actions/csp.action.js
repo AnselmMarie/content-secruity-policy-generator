@@ -27,7 +27,7 @@ export const modifyUrl = (type, {index, name}) => {
     type: `${type}_modify_url`,
     data: {
       index,
-      name
+      name,
     }
   }
 };
