@@ -44,7 +44,6 @@ import initState from './csp.state';
  * @return {object}
  */
 export default (state = initState, action) => {
-  console.log('action.type', action.type);
   const data = action.data;
 
   /**** DEFAULT-SRC ***/
@@ -74,96 +73,121 @@ export default (state = initState, action) => {
   /**** IMG-SRC ***/
   switch (action.type) {
     case (IMG_MODIFY_CHECKBOX):
-      const obj = updateChecked(state, data);
+      const img1 = updateChecked(state, data, 'imgGeneral');
 
-      if (obj.currentObj.name === data.name) {
-        return { ...state, imgGeneral: obj.clonedData };
+      if (img1.currentObj.name === data.name) {
+        return { ...state, imgGeneral: img1.clonedData };
       } else {
         console.log('ERROR IN DATA BEING UPDATED');
       }
 
     case (IMG_MODIFY_URL):
-      return;
+      const img2 = updateUrl(state, data, 'imgCustom');
+      return { ...state, imgCustom: img2.clonedData };
+
     case (IMG_ADD_URL):
-      return;
+      const img3 = addUrl(state, 'imgCustom');
+      return { ...state, imgCustom: img3 };
+
     case (IMG_DELETE_URL):
-      return;
+      const img4 = deleteUrl(state, data, 'imgCustom');
+      return { ...state, imgCustom: img4.clonedData };
   }
 
   /**** STYLE-SRC ***/
   switch (action.type) {
     case (STYLE_MODIFY_CHECKBOX):
-      const obj = updateChecked(state, data);
+      const style1 = updateChecked(state, data, 'styleGeneral');
 
-      if (obj.currentObj.name === data.name) {
-        return { ...state, styleGeneral: obj.clonedData };
+      if (style1.currentObj.name === data.name) {
+        return { ...state, styleGeneral: style1.clonedData };
       } else {
         console.log('ERROR IN DATA BEING UPDATED');
       }
 
     case (STYLE_MODIFY_URL):
-      return;
+      const style2 = updateUrl(state, data, 'styleCustom');
+      return { ...state, styleCustom: style2.clonedData };
+
     case (STYLE_ADD_URL):
-      return;
+      const style3 = addUrl(state, 'styleCustom');
+      return { ...state, styleCustom: style3 };
+
     case (STYLE_DELETE_URL):
-      return;
+      const style4 = deleteUrl(state, data, 'styleCustom');
+      return { ...state, styleCustom: style4.clonedData };
   }
 
   /**** SCRIPT-SRC ***/
   switch (action.type) {
     case (SCRIPT_MODIFY_CHECKBOX):
-      const obj = updateChecked(state, data);
+      const script1 = updateChecked(state, data, 'scriptGeneral');
 
-      if (obj.currentObj.name === data.name) {
-        return { ...state, scriptGeneral: obj.clonedData };
+      if (script1.currentObj.name === data.name) {
+        return { ...state, scriptGeneral: script1.clonedData };
       } else {
         console.log('ERROR IN DATA BEING UPDATED');
       }
 
     case (SCRIPT_MODIFY_URL):
-      return;
+      const script2 = updateUrl(state, data, 'scriptCustom');
+      return { ...state, scriptCustom: script2.clonedData };
+
     case (SCRIPT_ADD_URL):
-      return;
+      const script3 = addUrl(state, 'scriptCustom');
+      return { ...state, scriptCustom: script3 };
+
     case (SCRIPT_DELETE_URL):
-      return;
+      const script4 = deleteUrl(state, data, 'scriptCustom');
+      return { ...state, scriptCustom: script4.clonedData };
   }
 
   /**** FRAME-SRC ***/
   switch (action.type) {
     case (FRAME_MODIFY_CHECKBOX):
-      const obj = updateChecked(state, data);
+      const frame1 = updateChecked(state, data, 'frameGeneral');
 
-      if (obj.currentObj.name === data.name) {
-        return { ...state, frameGeneral: obj.clonedData };
+      if (frame1.currentObj.name === data.name) {
+        return { ...state, frameGeneral: frame1.clonedData };
       } else {
         console.log('ERROR IN DATA BEING UPDATED');
       }
 
     case (FRAME_MODIFY_URL):
-      return;
+      const frame2 = updateUrl(state, data, 'frameCustom');
+      return { ...state, frameCustom: frame2.clonedData };
+
     case (FRAME_ADD_URL):
-      return;
+      const frame3 = addUrl(state, 'frameCustom');
+      return { ...state, frameCustom: frame3 };
+
     case (FRAME_DELETE_URL):
-      return;
+      const frame4 = deleteUrl(state, data, 'frameCustom');
+      return { ...state, frameCustom: frame4.clonedData };
   }
 
   /**** FONT-SRC ***/
   switch (action.type) {
     case (FONT_MODIFY_CHECKBOX):
-      const obj = updateChecked(state, data);
+      const font1 = updateChecked(state, data, 'fontGeneral');
 
-      if (obj.currentObj.name === data.name) {
-        return { ...state, fontGeneral: obj.clonedData };
+      if (font1.currentObj.name === data.name) {
+        return { ...state, fontGeneral: font1.clonedData };
       } else {
         console.log('ERROR IN DATA BEING UPDATED');
       }
 
     case (FONT_MODIFY_URL):
-      return;
+      const font2 = updateUrl(state, data, 'fontCustom');
+      return { ...state, fontCustom: font2.clonedData };
+
     case (FONT_ADD_URL):
-      return;
+      const font3 = addUrl(state, 'fontCustom');
+      return { ...state, fontCustom: font3 };
+
     case (FONT_DELETE_URL):
-      return;
+      const font4 = deleteUrl(state, data, 'fontCustom');
+      return { ...state, fontCustom: font4.clonedData };
   }
 
   return state;

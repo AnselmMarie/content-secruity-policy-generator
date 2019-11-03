@@ -37,7 +37,7 @@ const styleState  = {
       checked: false,
     }
   ],
-  customData: []
+  customData: ['']
 };
 
 export default styleState;

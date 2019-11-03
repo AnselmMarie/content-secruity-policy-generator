@@ -2,21 +2,26 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 /* Routes */
-import defaultRoute from '../../routes/default.route';
-import generateRoute from '../../routes/generate.route';
-import errRoute from '../../routes/err.route';
+import DefaultRoute from '../../routes/default.route';
+import ImgRoute from '../../routes/img.route';
+import StyleRoute from '../../routes/style.route';
+import ScriptRoute from '../../routes/script.route';
+import FrameRoute from '../../routes/frame.route';
+import FontRoute from '../../routes/font.route';
+import GenerateRoute from '../../routes/generate.route';
+import ErrRoute from '../../routes/err.route';
 
 export default ($this) => {
   return (
     <Switch>
-      <Route exact path="/" component={defaultRoute} />
-      {/* <Route exact path="/img-src" component={} />
-      <Route exact path="/style-src" component={} />
-      <Route exact path="/script-src" component={} />
-      <Route exact path="/frame-src" component={} />
-      <Route exact path="/font-src" component={} /> */}
-      <Route exact path="/generate" component={generateRoute} />
-      <Route component={errRoute} />
+      <Route exact path="/" component={DefaultRoute} />
+      <Route exact path="/img-src" component={ImgRoute} />
+      <Route exact path="/style-src" component={StyleRoute} />
+      <Route exact path="/script-src" component={ScriptRoute} />
+      <Route exact path="/frame-src" component={FrameRoute} />
+      <Route exact path="/font-src" component={FontRoute} />
+      <Route exact path="/generate" component={GenerateRoute} />
+      <Route component={ErrRoute} />
   </Switch>
   )
 }

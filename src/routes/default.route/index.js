@@ -1,3 +1,3 @@
-import defaultRoute from './default.redux';
+import DefaultRoute from './default.redux';
 
-export default defaultRoute;
+export default DefaultRoute;

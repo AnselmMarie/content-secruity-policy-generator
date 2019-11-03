@@ -1,4 +1,4 @@
 /* Node Modules */
-import generateRoute from './generate.view';
+import GenerateRoute from './generate.view';
 
-export default generateRoute;
+export default GenerateRoute;

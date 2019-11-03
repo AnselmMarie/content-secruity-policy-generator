@@ -1,38 +1,32 @@
 /* Node Modules */
 import React from 'react';
 /* Data Store */
-import { DEFAULT_SRC } from '../../data.store/actions/action.constants';
+import { FRAME_SRC } from '../../data.store/actions/action.constants';
 /* Components */
 import HeadingComponent from '../../components/heading.component';
 import GeneralSettingsComponent from '../../components/general.settings.component';
 import CustomUrlComponent from '../../components/custom.urls.component';
 
-/**
- * @function General Settings
- * @desc rendering the view for the default route
- * @author Anselm Marie
- * @param {object} props - global property data
- */
 export default (props) => {
-  return(
+  return (
     <>
 
       <HeadingComponent heading='h2'>
-        Default Source Content
+        Script Source Content
       </HeadingComponent>
 
       <GeneralSettingsComponent
-        type={DEFAULT_SRC}
+        type={FRAME_SRC}
         modifyCheckbox={props.modifyCheckbox}
-        generalData={props.defaultGeneral} />
+        generalData={props.frameGeneral} />
 
       <CustomUrlComponent
-        type={DEFAULT_SRC}
+        type={FRAME_SRC}
         addUrl={props.addUrl}
         modifyUrl={props.modifyUrl}
         deleteUrl={props.deleteUrl}
-        customData={props.defaultCustom} />
+        customData={props.frameCustom} />
 
     </>
-  );
+  )
 }

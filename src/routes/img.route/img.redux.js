@@ -8,7 +8,7 @@ import {
   deleteUrl,
 } from '../../data.store/actions';
 /* Route Content */
-import defaultView from './default.view';
+import ImgView from './img.view';
 
 /**
  * @function mapStateToProps
@@ -19,10 +19,10 @@ import defaultView from './default.view';
  */
 const mapStateToProps = (state) => {
   return {
-    defaultGeneral: state.cspData.defaultGeneral,
-    defaultCustom: state.cspData.defaultCustom,
+    imgGeneral: state.cspData.imgGeneral,
+    imgCustom: state.cspData.imgCustom,
   }
-}
+};
 
 /**
  * @property mapDispatchToProps
@@ -34,7 +34,6 @@ const mapDispatchToProps = {
   modifyUrl,
   addUrl,
   deleteUrl,
-}
+};
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(defaultView);
+export default connect(mapStateToProps, mapDispatchToProps)(ImgView);

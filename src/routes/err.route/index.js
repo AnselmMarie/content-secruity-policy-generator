@@ -1,4 +1,4 @@
 /* Node Modules */
-import errRoute from './err.view';
+import ErrRoute from './err.view';
 
-export default errRoute;
+export default ErrRoute;

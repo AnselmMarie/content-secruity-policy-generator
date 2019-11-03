@@ -8,7 +8,7 @@ import {
   deleteUrl,
 } from '../../data.store/actions';
 /* Route Content */
-import defaultView from './default.view';
+import frameView from './frame.view';
 
 /**
  * @function mapStateToProps
@@ -19,8 +19,8 @@ import defaultView from './default.view';
  */
 const mapStateToProps = (state) => {
   return {
-    defaultGeneral: state.cspData.defaultGeneral,
-    defaultCustom: state.cspData.defaultCustom,
+    frameGeneral: state.cspData.frameGeneral,
+    frameCustom: state.cspData.frameCustom,
   }
 }
 
@@ -37,4 +37,4 @@ const mapDispatchToProps = {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(defaultView);
+export default connect(mapStateToProps, mapDispatchToProps)(frameView);
