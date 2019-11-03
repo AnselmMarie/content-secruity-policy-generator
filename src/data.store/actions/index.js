@@ -1,1 +1,1 @@
-export * from './csp.actions';
+export * from './csp.action';

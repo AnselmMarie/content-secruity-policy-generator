@@ -15,6 +15,7 @@ export default (props) => {
           return (
             <div key={i} className="col-xs-6">
               <input type="input" id={inputName} className="form-control" name={inputName} val={el} />
+              <span className="delete-button">x</span>
             </div>
           )
         })}

@@ -2,7 +2,6 @@
 import React from 'react';
 /* Components */
 import HeadingComponent from '../../components/heading.component';
-import CheckboxComponent from '../checkbox.component';
 
 /**
  * @function General Settings
@@ -21,10 +20,11 @@ export default (props) => {
       {props.generalData &&
         <ul>
           {props.generalData.map((el, i) => {
+            const checkboxData = {index: i, name: el.name};
             return (
               <li key={i}>
                 <label name={el.name}>
-                  <input type="checkbox" name={el.name} data-checked={el.checked} />
+                  <input type="checkbox" name={el.name} data-checked={el.checked} onClick={() => props.modifyCheckbox(props.type, checkboxData)} />
                   {el.name}
                 </label>
               </li>

@@ -1,5 +1,12 @@
 /* Node Modules */
 import { connect } from 'react-redux';
+/* Data Store */
+import {
+  modifyCheckbox,
+  modifyUrl,
+  addUrl,
+  deleteUrl,
+} from '../../data.store/actions';
 /* Route Content */
 import defaultView from './default.view';
 
@@ -10,7 +17,8 @@ import defaultView from './default.view';
  */
 const mapStateToProps = (state) => {
   return {
-    defaultData: state.cspData.default,
+    defaultGeneral: state.cspData.defaultGeneral,
+    defaultCustom: state.cspData.defaultCustom,
   }
 }
 
@@ -20,7 +28,10 @@ const mapStateToProps = (state) => {
  * @author Anselm Marie
  */
 const mapDispatchToProps = {
-
+  modifyCheckbox,
+  modifyUrl,
+  addUrl,
+  deleteUrl,
 }
 
 

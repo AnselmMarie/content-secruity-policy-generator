@@ -1,5 +1,7 @@
 /* Node Modules */
 import React from 'react';
+/* Data Store */
+import { DEFAULT_SRC } from '../../data.store/actions/action.constants';
 /* Components */
 import HeadingComponent from '../../components/heading.component';
 import GeneralSettingsComponent from '../../components/general.settings.component';
@@ -12,6 +14,7 @@ import CustomUrlComponent from '../../components/custom.urls.component';
  * @param {object} props - global property data
  */
 export default (props) => {
+  console.log('props.defaultGeneral', props.defaultGeneral);
   return(
     <>
 
@@ -20,10 +23,12 @@ export default (props) => {
       </HeadingComponent>
 
       <GeneralSettingsComponent
-        generalData={props.defaultData.generalData} />
+        type={DEFAULT_SRC}
+        modifyCheckbox={props.modifyCheckbox}
+        generalData={props.defaultGeneral} />
 
       <CustomUrlComponent
-        customData={props.defaultData.customData} />
+        customData={props.defaultCustom} />
 
     </>
   );

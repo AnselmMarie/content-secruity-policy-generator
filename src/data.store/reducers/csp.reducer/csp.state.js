@@ -12,12 +12,18 @@ import fontState from './csp.state.font';
  * @author Anselm Marie
  */
 const initState = {
-  default: defaultState,
-  img: imgState,
-  style: styleState,
-  script: scriptState,
-  frame: frameState,
-  font: fontState,
+  defaultGeneral: defaultState.generalData,
+  defaultCustom: defaultState.customData,
+  imgGeneral: imgState.generalData,
+  imgCustom: imgState.customData,
+  styleGeneral: styleState.generalData,
+  styleCustom: styleState.customData,
+  scriptGeneral: scriptState.generalData,
+  scriptCustom: scriptState.customData,
+  frameGeneral: frameState.generalData,
+  frameCustom: frameState.customData,
+  fontGeneral: fontState.generalData,
+  fontCustom: fontState.customData,
 }
 
 export default initState;
