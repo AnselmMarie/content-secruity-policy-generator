@@ -26,7 +26,12 @@ import {
   FONT_DELETE_URL,
 } from '../../actions/action.constants';
 /* Modules */
-import { updateChecked, updateUrl } from '../../../modules/redux.helper.module';
+import {
+  updateChecked,
+  updateUrl,
+  addUrl,
+  deleteUrl
+} from '../../../modules/redux.helper.module';
 /* Reducer Content */
 import initState from './csp.state';
 
@@ -58,9 +63,12 @@ export default (state = initState, action) => {
       return { ...state, defaultCustom: default2.clonedData };
 
     case (DEFAULT_ADD_URL):
-      return;
+      const default3 = addUrl(state, 'defaultCustom');
+      return { ...state, defaultCustom: default3 };
+
     case (DEFAULT_DELETE_URL):
-      return;
+      const default4 = deleteUrl(state, data, 'defaultCustom');
+      return { ...state, defaultCustom: default4.clonedData };
   }
 
   /**** IMG-SRC ***/

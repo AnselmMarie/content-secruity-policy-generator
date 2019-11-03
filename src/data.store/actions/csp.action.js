@@ -3,6 +3,7 @@
  * @desc modifying the type's checkbox
  * @author Anselm Marie
  * @param {string} type - the CSP section
+ * @param {object} data - data needed for update to happen
  * @return {object} - this object and being sent to the reducer
  */
 export const modifyCheckbox = (type, {index, name}) => {
@@ -20,6 +21,7 @@ export const modifyCheckbox = (type, {index, name}) => {
  * @desc modifying the type's url
  * @author Anselm Marie
  * @param {string} type - the CSP section
+ * @param {object} data - data needed for update to happen
  * @return {object} - this object and being sent to the reducer
  */
 export const modifyUrl = (type, {index, name}) => {
@@ -39,13 +41,9 @@ export const modifyUrl = (type, {index, name}) => {
  * @param {string} type - the CSP section
  * @return {object} - this object and being sent to the reducer
  */
-export const addUrl = (type, {index, name}) => {
+export const addUrl = (type) => {
   return {
-    type: `${type}_add_url`,
-    data: {
-      index,
-      name
-    }
+    type: `${type}_add_url`
   }
 };
 
@@ -54,6 +52,7 @@ export const addUrl = (type, {index, name}) => {
  * @desc delete the type's url
  * @author Anselm Marie
  * @param {string} type - the CSP section
+ * @param {object} data - data needed for update to happen
  * @return {object} - this object and being sent to the reducer
  */
 export const deleteUrl = (type, {index, name}) => {

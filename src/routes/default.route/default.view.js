@@ -28,7 +28,9 @@ export default (props) => {
 
       <CustomUrlComponent
         type={DEFAULT_SRC}
+        addUrl={props.addUrl}
         modifyUrl={props.modifyUrl}
+        deleteUrl={props.deleteUrl}
         customData={props.defaultCustom} />
 
     </>
