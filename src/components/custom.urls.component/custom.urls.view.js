@@ -2,20 +2,7 @@
 import React from 'react';
 /* Components */
 import HeadingComponent from '../../components/heading.component';
-
-/**
- * @function sendDispatchModify
- * @desc This will update the csp store
- * @author Anselm Marie
- * @param {object} e - event object of element
- * @param {object} i - index of data
- * @param {object} props - content from the parent component
- * @return {object}
- */
-const sendDispatchModify = (e, i, props) => {
-  const urlData = { index: i, name: e.currentTarget.value };
-  props.modifyUrl(props.type, urlData);
-}
+import CheckboxComponent from '../../components/checkbox.component';
 
 /**
  * @function sendDispatchAdd
@@ -26,19 +13,6 @@ const sendDispatchModify = (e, i, props) => {
  */
 const sendDispatchAdd = (props) => {
   props.addUrl(props.type);
-}
-
-/**
- * @function sendDispatchDelete
- * @desc This will delete a string in the csp store
- * @author Anselm Marie
- * @param {object} i - index of data
- * @param {object} props - content from the parent component
- * @return {object}
- */
-const sendDispatchDelete = (i, props) => {
-  const urlData = { index: i };
-  props.deleteUrl(props.type, urlData);
 }
 
 /**
@@ -57,12 +31,7 @@ export default (props) => {
       <div>
         {props.customData && props.customData.map((el, i) => {
           const inputName = `name${i}`;
-          return (
-            <div key={i} className="col-xs-6 col-md-3">
-              <input type="input" id={inputName} className="form-control" name={inputName} value={el} onChange={(e) => sendDispatchModify(e, i, props)} />
-              <span className="delete-button" onClick={() => sendDispatchDelete(i, props)}>x</span>
-            </div>
-          )
+          return <CheckboxComponent inputName={inputName} key={i} i={i} el ={el} {...props} />
         })}
       </div>
     </>
