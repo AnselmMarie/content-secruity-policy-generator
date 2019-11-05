@@ -12,7 +12,7 @@ import CheckboxComponent from '../../components/checkbox.component';
  * @return {object}
  */
 const sendDispatchAdd = (props) => {
-  props.addUrl(props.type);
+  props.addEmptyUrl_AC(props.type);
 }
 
 /**
@@ -25,6 +25,7 @@ const sendDispatchAdd = (props) => {
 export default (props) => {
   return (
     <>
+
       <HeadingComponent heading="h3">
         Custom Urls <span onClick={() => sendDispatchAdd(props)}>+</span>
       </HeadingComponent>
@@ -34,6 +35,7 @@ export default (props) => {
           return <CheckboxComponent inputName={inputName} key={i} i={i} el ={el} {...props} />
         })}
       </div>
+
     </>
   )
 };

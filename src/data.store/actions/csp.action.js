@@ -1,12 +1,12 @@
 /**
- * @function modifyCheckbox
+ * @function modifyCheckbox_AC
  * @desc modifying the type's checkbox
  * @author Anselm Marie
  * @param {string} type - the CSP section
  * @param {object} data - data needed for update to happen
- * @return {object} - this object and being sent to the reducer
+ * @return {object}
  */
-export const modifyCheckbox = (type, {index, name}) => {
+export const modifyCheckbox_AC = (type, {index, name}) => {
   return {
     type: `${type}_modify_checkbox`,
     data: {
@@ -17,14 +17,14 @@ export const modifyCheckbox = (type, {index, name}) => {
 };
 
 /**
- * @function modifyUrl
+ * @function modifyUrl_AC
  * @desc modifying the type's url
  * @author Anselm Marie
  * @param {string} type - the CSP section
  * @param {object} data - data needed for update to happen
- * @return {object} - this object and being sent to the reducer
+ * @return {object}
  */
-export const modifyUrl = (type, {index, name}) => {
+export const modifyUrl_AC = (type, {index, name}) => {
   return {
     type: `${type}_modify_url`,
     data: {
@@ -35,27 +35,44 @@ export const modifyUrl = (type, {index, name}) => {
 };
 
 /**
- * @function addUrl
- * @desc add the type's url
+ * @function addEmptyUrl_AC
+ * @desc add the type's empty url
  * @author Anselm Marie
  * @param {string} type - the CSP section
- * @return {object} - this object and being sent to the reducer
+ * @return {object}
  */
-export const addUrl = (type) => {
+export const addEmptyUrl_AC = (type) => {
   return {
-    type: `${type}_add_url`
+    type: `${type}_add_empty_url`,
   }
 };
 
 /**
- * @function deleteUrl
+ * @function addUrl_AC
+ * @desc add the type's url
+ * @author Anselm Marie
+ * @param {string} type - the CSP section
+ * @param {object} data - data needed for update to happen
+ * @return {object}
+ */
+export const addUrl_AC = (type, {name}) => {
+  return {
+    type: `${type}_add_url`,
+    data: {
+      name,
+    }
+  }
+};
+
+/**
+ * @function deleteUrl_AC
  * @desc delete the type's url
  * @author Anselm Marie
  * @param {string} type - the CSP section
  * @param {object} data - data needed for update to happen
- * @return {object} - this object and being sent to the reducer
+ * @return {object}
  */
-export const deleteUrl = (type, {index, name}) => {
+export const deleteUrl_AC = (type, {index, name}) => {
   return {
     type: `${type}_delete_url`,
     data: {

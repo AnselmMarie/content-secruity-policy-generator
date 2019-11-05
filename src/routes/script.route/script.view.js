@@ -17,14 +17,14 @@ export default (props) => {
 
       <GeneralSettingsComponent
         type={SCRIPT_SRC}
-        modifyCheckbox={props.modifyCheckbox}
+        modifyCheckbox_AC={props.modifyCheckbox_AC}
         generalData={props.scriptGeneral} />
 
       <CustomUrlComponent
         type={SCRIPT_SRC}
-        addUrl={props.addUrl}
-        modifyUrl={props.modifyUrl}
-        deleteUrl={props.deleteUrl}
+        addEmptyUrl_AC={props.addEmptyUrl_AC}
+        modifyUrl_AC={props.modifyUrl_AC}
+        deleteUrl_AC={props.deleteUrl_AC}
         customData={props.scriptCustom} />
 
     </>

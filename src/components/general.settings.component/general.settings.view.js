@@ -36,7 +36,7 @@ export default (props) => {
             return (
               <li key={i}>
                 <label name={el.name}>
-                  <input type="checkbox" name={el.name} data-checked={el.checked} onClick={() => props.modifyCheckbox(props.type, checkboxData)} />
+                  <input type="checkbox" name={el.name} data-checked={el.checked} onClick={() => props.modifyCheckbox_AC(props.type, checkboxData)} />
                   <div className={checkClass(el.checked)}></div>
                   {el.name}
                 </label>

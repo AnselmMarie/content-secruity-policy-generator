@@ -34,7 +34,7 @@ let dataLength = null;
  */
 const sendDispatchModify = (e, props) => {
   const urlData = { index: props.i, name: e.currentTarget.value };
-  props.modifyUrl(props.type, urlData);
+  props.modifyUrl_AC(props.type, urlData);
 }
 
 /**
@@ -46,7 +46,7 @@ const sendDispatchModify = (e, props) => {
  */
 const sendDispatchDelete = (props) => {
   const urlData = { index: props.i };
-  props.deleteUrl(props.type, urlData);
+  props.deleteUrl_AC(props.type, urlData);
 }
 
 /**
@@ -93,8 +93,8 @@ export default (props) => {
   return (
     <>
       <div className="column-custom">
-        <input type="input" id={props.inputName} className="form-control" name={props.inputName} value={props.el} onChange={(e) => sendDispatchModify(e, props)} />
-        <span className="delete-button" onClick={() => sendDispatchDelete(props)}>x</span>
+        <input type="input" id={props.inputName} className="form-control" aria-checked={props.checked} name={props.inputName} value={props.el} onChange={(e) => sendDispatchModify(e, props)} />
+        <span role="button" className="delete-button" onClick={() => sendDispatchDelete(props)}>x</span>
       </div>
       {columnCheck(props.i, props.customData) && <hr />}
     </>

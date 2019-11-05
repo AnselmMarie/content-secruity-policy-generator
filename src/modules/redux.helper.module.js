@@ -44,12 +44,13 @@ export const updateUrl = (state, data, dataOfInterest) => {
  * @author Anselm Marie
  * @param {object} state = the current state of this store
  * @param {string} dataOfInterest - the data that needs to be checked
+ * @param {string} url - the url that needs to be added
  * @return {object}
  */
-export const addUrl = (state, dataOfInterest) => {
+export const addUrl = (state, dataOfInterest, url) => {
   let clonedData = [...state[dataOfInterest]];
   const currentLength = clonedData.length === 0 ? 1 : clonedData.length;
-  clonedData[currentLength] = '';
+  clonedData[currentLength] = url ? url : '';
 
   return clonedData;
 }

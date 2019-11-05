@@ -16,14 +16,14 @@ export default () => {
         <aside className="side-area">
           <NavigationComponent />
         </aside>
-        <div className="main-area">
+        <main role="main" className="main-area">
           <header>
             <MainHeaderComponent />
           </header>
           <section className="section-area">
             <RouteComponent />
           </section>
-        </div>
+        </main>
       </Router>
     </Provider>
   );
