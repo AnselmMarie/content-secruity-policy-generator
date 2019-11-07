@@ -18,6 +18,9 @@ import generalDataEnum from '../configs/general.data.enum';
  * @param {object} props - parent information data
  */
 export const importData = (inputData, props) => {
+
+  props.resetData_AC();
+
   const srcSplit = inputData.split(';');
 
   srcSplit.forEach((el, i) => {
@@ -27,8 +30,6 @@ export const importData = (inputData, props) => {
     let currentSrc = null;
 
     for (let loop = 0; loop < length; loop++) {
-
-      console.log('loop', loop);
 
       // Update the current src during the first loop
       if (!currentSrc) {
@@ -93,7 +94,6 @@ const checkSrcType = (srcType) => {
 const storeData = (currentSrc, el, props) => {
 
   if (el.includes('http')) {
-    console.log('el', el);
     props.addUrl_AC(currentSrc, {
       url: el,
     });
@@ -102,6 +102,7 @@ const storeData = (currentSrc, el, props) => {
     el = el
           .replace(new RegExp('"', 'g'), '')
           .replace(new RegExp("'", 'g'), '');
+
     props.modifyCheckbox_AC(currentSrc, {
       index: getIndex(el),
       name: el,
@@ -122,11 +123,7 @@ const getIndex = (el) => {
   const length = generalDataEnum.length;
 
   for (let loop = 0; loop < length; loop++) {
-    // console.log('el', el);
-    // console.log('name', generalDataEnum[loop].val);
-    // console.log('---------');
     if (el === generalDataEnum[loop].val) {
-      // console.log('loop', loop);
       return loop;
     }
   }

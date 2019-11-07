@@ -1,3 +1,7 @@
+import {
+  RESET_DATA,
+} from './action.constants';
+
 /**
  * @function modifyCheckbox_AC
  * @desc modifying the type's checkbox
@@ -79,5 +83,17 @@ export const deleteUrl_AC = (type, {index, url}) => {
       index,
       url
     }
+  }
+};
+
+/**
+ * @function resetData_AC
+ * @desc reset all content data
+ * @author Anselm Marie
+ * @return {object}
+ */
+export const resetData_AC = () => {
+  return {
+    type: RESET_DATA
   }
 };

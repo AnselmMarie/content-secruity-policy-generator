@@ -70,7 +70,6 @@ const columnCheck = (i, customData) => {
   if (i === theNextSplit) {
     addSplit = true;
     theNextSplit = theNextSplit + rowSplit;
-    console.log('1');
   }
 
   if (i === dataLength) {

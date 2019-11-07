@@ -11,7 +11,7 @@ export const IMG_SRC = 'img';
 export const IMG_MODIFY_CHECKBOX = `${IMG_SRC}_modify_checkbox`;
 export const IMG_MODIFY_URL = `${IMG_SRC}_modify_url`;
 export const IMG_ADD_EMPTY_URL = `${IMG_SRC}_ADD_EMPTY_URL`;
-export const IMG_ADD_URL = `${IMG_SRC}_ADD_URL`;
+export const IMG_ADD_URL = `${IMG_SRC}_add_url`;
 export const IMG_DELETE_URL = `${IMG_SRC}_delete_url`;
 
 /* STYLE-SRC */
@@ -35,6 +35,7 @@ export const FRAME_SRC = 'frame';
 export const FRAME_MODIFY_CHECKBOX = `${FRAME_SRC}_modify_checkbox`;
 export const FRAME_MODIFY_URL = `${FRAME_SRC}_modify_url`;
 export const FRAME_ADD_EMPTY_URL = `${FRAME_SRC}_add_empty_url`;
+export const FRAME_ADD_URL = `${FRAME_SRC}_add_url`;
 export const FRAME_DELETE_URL = `${FRAME_SRC}_delete_url`;
 
 /* FONT-SRC */
@@ -44,3 +45,6 @@ export const FONT_MODIFY_URL = `${FONT_SRC}_modify_url`;
 export const FONT_ADD_EMPTY_URL = `${FONT_SRC}_add_empty_url`;
 export const FONT_ADD_URL = `${FONT_SRC}_add_url`;
 export const FONT_DELETE_URL = `${FONT_SRC}_delete_url`;
+
+/* OTHER */
+export const RESET_DATA = 'reset_data';
