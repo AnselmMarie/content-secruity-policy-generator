@@ -33,7 +33,7 @@ let dataLength = null;
  * @return {object}
  */
 const sendDispatchModify = (e, props) => {
-  const urlData = { index: props.i, name: e.currentTarget.value };
+  const urlData = { index: props.i, url: e.currentTarget.value };
   props.modifyUrl_AC(props.type, urlData);
 }
 

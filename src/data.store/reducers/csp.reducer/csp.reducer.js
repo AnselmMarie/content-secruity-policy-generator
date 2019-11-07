@@ -3,6 +3,7 @@ import {
   DEFAULT_MODIFY_CHECKBOX,
   DEFAULT_MODIFY_URL,
   DEFAULT_ADD_EMPTY_URL,
+  DEFAULT_ADD_URL,
   DEFAULT_DELETE_URL,
   IMG_MODIFY_CHECKBOX,
   IMG_MODIFY_URL,
@@ -62,12 +63,17 @@ export default (state = initState, action) => {
       return { ...state, defaultCustom: default2.clonedData };
 
     case (DEFAULT_ADD_EMPTY_URL):
-      const default3 = addUrl(state, 'defaultCustom');
+      const default3 = addUrl(state, null, 'defaultCustom');
       return { ...state, defaultCustom: default3 };
 
+    case (DEFAULT_ADD_URL):
+      const url = data && data.url;
+      const default4 = addUrl(state, url, 'defaultCustom');
+      return { ...state, defaultCustom: default4 };
+
     case (DEFAULT_DELETE_URL):
-      const default4 = deleteUrl(state, data, 'defaultCustom');
-      return { ...state, defaultCustom: default4.clonedData };
+      const default5 = deleteUrl(state, data, 'defaultCustom');
+      return { ...state, defaultCustom: default5.clonedData };
   }
 
   /**** IMG-SRC ***/

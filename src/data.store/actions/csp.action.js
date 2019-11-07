@@ -24,12 +24,12 @@ export const modifyCheckbox_AC = (type, {index, name}) => {
  * @param {object} data - data needed for update to happen
  * @return {object}
  */
-export const modifyUrl_AC = (type, {index, name}) => {
+export const modifyUrl_AC = (type, {index, url}) => {
   return {
     type: `${type}_modify_url`,
     data: {
       index,
-      name,
+      url,
     }
   }
 };
@@ -55,11 +55,11 @@ export const addEmptyUrl_AC = (type) => {
  * @param {object} data - data needed for update to happen
  * @return {object}
  */
-export const addUrl_AC = (type, {name}) => {
+export const addUrl_AC = (type, {url}) => {
   return {
     type: `${type}_add_url`,
     data: {
-      name,
+      url,
     }
   }
 };
@@ -72,12 +72,12 @@ export const addUrl_AC = (type, {name}) => {
  * @param {object} data - data needed for update to happen
  * @return {object}
  */
-export const deleteUrl_AC = (type, {index, name}) => {
+export const deleteUrl_AC = (type, {index, url}) => {
   return {
     type: `${type}_delete_url`,
     data: {
       index,
-      name
+      url
     }
   }
 };

@@ -22,7 +22,7 @@ const mapStateToProps = (state) => {
     defaultGeneral: state.cspData.defaultGeneral,
     defaultCustom: state.cspData.defaultCustom,
   }
-}
+};
 
 /**
  * @property mapDispatchToProps
@@ -34,7 +34,6 @@ const mapDispatchToProps = {
   modifyUrl_AC,
   addEmptyUrl_AC,
   deleteUrl_AC,
-}
-
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(defaultView);

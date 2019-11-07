@@ -43,13 +43,19 @@ export const updateUrl = (state, data, dataOfInterest) => {
  * @desc add url content
  * @author Anselm Marie
  * @param {object} state = the current state of this store
- * @param {string} dataOfInterest - the data that needs to be checked
  * @param {string} url - the url that needs to be added
+ * @param {string} dataOfInterest - the data that needs to be checked
  * @return {object}
  */
-export const addUrl = (state, dataOfInterest, url) => {
+export const addUrl = (state, url, dataOfInterest) => {
   let clonedData = [...state[dataOfInterest]];
-  const currentLength = clonedData.length === 0 ? 1 : clonedData.length;
+  let currentLength;
+
+  if (clonedData[0] === '') {
+    currentLength = 0;
+  } else {
+    currentLength = clonedData.length === 0 ? 1 : clonedData.length;
+  }
   clonedData[currentLength] = url ? url : '';
 
   return clonedData;
@@ -67,7 +73,7 @@ export const addUrl = (state, dataOfInterest, url) => {
 export const deleteUrl = (state, data, dataOfInterest) => {
   const currentObj = state[dataOfInterest][data.index];
   let clonedData = [...state[dataOfInterest]];
-  clonedData = clonedData.filter((el, i) => i !== data.index );
+  clonedData = clonedData.filter((el, i) => i !== data.index);
 
   return {
     currentObj,

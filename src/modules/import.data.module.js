@@ -1,3 +1,4 @@
+/* Data Store */
 import {
   DEFAULT_SRC,
   IMG_SRC,
@@ -6,6 +7,8 @@ import {
   FRAME_SRC,
   FONT_SRC,
 } from '../data.store/actions/action.constants';
+/* Config */
+import generalDataEnum from '../configs/general.data.enum';
 
 /**
  * @function importData
@@ -83,21 +86,49 @@ const checkSrcType = (srcType) => {
  * @function storeData
  * @desc store data based on type of data
  * @author Anselm Marie
+ * @param {string} currentSrc - current '-src'
  * @param {string} el - element from the csp src
  * @param {object} props - parent information data
  */
 const storeData = (currentSrc, el, props) => {
 
   if (el.includes('http')) {
-    props.modifyCheckbox_AC(currentSrc, {
-      index: '',
-      name: el,
+    console.log('el', el);
+    props.addUrl_AC(currentSrc, {
+      url: el,
     });
 
   } else if (el.includes('"') || el.includes('data') || el.includes("'")) {
-    props.addUrl_AC(currentSrc, {
+    el = el
+          .replace(new RegExp('"', 'g'), '')
+          .replace(new RegExp("'", 'g'), '');
+    props.modifyCheckbox_AC(currentSrc, {
+      index: getIndex(el),
       name: el,
     });
   }
 
 }
+
+/**
+ * @function getIndex
+ * @desc get the correct index for the current data
+ * @author Anselm Marie
+ * @param {string} el - element from the csp src
+ * @return {number}
+ */
+const getIndex = (el) => {
+
+  const length = generalDataEnum.length;
+
+  for (let loop = 0; loop < length; loop++) {
+    // console.log('el', el);
+    // console.log('name', generalDataEnum[loop].val);
+    // console.log('---------');
+    if (el === generalDataEnum[loop].val) {
+      // console.log('loop', loop);
+      return loop;
+    }
+  }
+
+};
