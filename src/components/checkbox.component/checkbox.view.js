@@ -24,7 +24,7 @@ export default (props) => {
     <label name={data.name}>
       <input type="checkbox" name={data.name} data-checked={data.checked} onClick={() => props.onClick()} />
       <div className={`checkbox ${checkClass(data.checked)}`}></div>
-      {data.name}
+      {data.label || data.name}
     </label>
   )
 }

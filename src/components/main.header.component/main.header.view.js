@@ -2,48 +2,7 @@
 import React from 'react';
 /* Components */
 import HeadingComponent from '../heading.component';
-/* Modules */
-import { importData } from './import.module';
-
-/**
- * @function getImportStatus
- * @desc changes class name based on import status
- * @author Anselm Marie
- * @param {boolean} importCompleted - if import status was already done
- */
-const getImportStatus = (importCompleted) => {
-  return importCompleted ? 'csp-reset-progress' : 'csp-start-progress';
-}
-
-/**
- * @function checkStatus
- * @desc render the checkbox url view
- * @author Anselm Marie
- * @param {object} e - event from the submit
- * @param {object} $this - parent information data
- */
-const checkStatus = (e, $this) => {
-  e.preventDefault();
-  const formClass = e.target.elements.cspBtn.className;
-  const inputData = e.target.elements.cspBreakdownTextArea.value;
-
-  // If data doesn't exist display error
-  if (!inputData) {
-    alert('hi');
-    return;
-  }
-
-  $this.setState({
-    inputData: inputData,
-    eventForm: e,
-  });
-
-  if (formClass.includes('csp-start-progress')) {
-    importData(inputData, $this);
-  } else if (formClass.includes('csp-reset-progress')) {
-    console.log('csp-reset-progress');
-  }
-}
+import CheckboxComponent from '../checkbox.component';
 
 /**
  * @function Main Header View
@@ -75,10 +34,15 @@ export default ($this) => {
               {$this.state.successMessage.message}
             </div>}
 
-          <form id="cspForm" onSubmit={(e) => checkStatus(e, $this)}>
+          <form id="cspForm" onSubmit={$this.checkStatus}>
             <textarea name="cspImportTextArea" id="cspBreakdownTextArea" rows="5" name="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" type="text" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />
-            You will lose any current information. Click "Import" if this is ok otherwise click "Cancel".
-            <button id="cspBtn" className={`btn btn-primary ${getImportStatus($this.state.importCompleted)}`}>Import</button>
+            {$this.state.importCompleted &&
+            <div>
+              <CheckboxComponent
+                data={$this.state.reImportCheckbox}
+                onClick={$this.updateCheckbox} />
+            </div>}
+            <button id="cspBtn" className={`btn btn-primary ${$this.getImportStatus($this.state.importCompleted)}`} disabled={$this.state.importCompleted && !$this.state.reImportCheckbox.checked}>Import</button>
           </form>
 
         </div>
