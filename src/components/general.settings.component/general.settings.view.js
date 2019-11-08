@@ -11,7 +11,7 @@ import HeadingComponent from '../../components/heading.component';
  * @return {string}
  */
 const checkClass = (checked) => {
-  return checked ? 'checkbox is-checked' : 'checkbox not-checked';
+  return checked ? 'is-checked' : 'not-checked';
 }
 
 /**
@@ -37,7 +37,7 @@ export default (props) => {
               <li key={i}>
                 <label name={el.name}>
                   <input type="checkbox" name={el.name} data-checked={el.checked} onClick={() => props.modifyCheckbox_AC(props.type, checkboxData)} />
-                  <div className={checkClass(el.checked)}></div>
+                  <div className={`checkbox ${checkClass(el.checked)}`}></div>
                   {el.name}
                 </label>
               </li>

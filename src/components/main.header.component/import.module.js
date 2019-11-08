@@ -6,22 +6,23 @@ import {
   SCRIPT_SRC,
   FRAME_SRC,
   FONT_SRC,
-} from '../data.store/actions/action.constants';
+} from '../../data.store/actions/action.constants';
 /* Config */
-import generalDataEnum from '../configs/general.data.enum';
+import generalDataEnum from '../../configs/general.data.enum';
 
 /**
  * @function importData
  * @desc render the checkbox url view
  * @author Anselm Marie
  * @param {string} inputData - input data
- * @param {object} props - parent information data
+ * @param {object} $this - parent information data
  */
-export const importData = (inputData, props) => {
+export const importData = (inputData, $this) => {
 
-  props.resetData_AC();
+  $this.props.resetData_AC();
 
   const srcSplit = inputData.split(';');
+  let isSuccess = false;
 
   srcSplit.forEach((el, i) => {
 
@@ -38,7 +39,8 @@ export const importData = (inputData, props) => {
 
       // If currentSrc variable exist run code to update content to the store
       if (currentSrc) {
-        storeData(currentSrc, itemSplit[loop], props);
+        storeData(currentSrc, itemSplit[loop], $this.props);
+        isSuccess = true;
       }
 
       // When the loop ends then reset the currentSrc variable for the next loop
@@ -50,7 +52,21 @@ export const importData = (inputData, props) => {
 
   });
 
-  console.log('cspData', props.cspData);
+  // Display Error is not successfully
+  if (!isSuccess) {
+    alert('no success');
+  }
+
+  // Update Store and display success message
+  if (isSuccess) {
+    $this.setState({
+      importCompleted: true,
+      inputData: null,
+      eventForm: null,
+    });
+  }
+
+  console.log('cspData', $this.props.cspData);
 
 }
 

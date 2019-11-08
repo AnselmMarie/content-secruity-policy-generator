@@ -200,10 +200,11 @@ export default (state = initState, action) => {
       return { ...state, fontCustom: font5.clonedData };
   }
 
-    /**** OTHER ***/
-    if (action.type === RESET_DATA) {
+  /**** OTHER ***/
+  switch (action.type) {
+    case (RESET_DATA):
       return cloneDeep(resetData);
-    }
+  }
 
   return state;
 

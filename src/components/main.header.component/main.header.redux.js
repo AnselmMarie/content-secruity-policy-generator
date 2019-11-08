@@ -7,7 +7,7 @@ import {
   resetData_AC,
 } from '../../data.store/actions';
 /* Component Content */
-import MainHeaderView from './main.header.view';
+import MainHeaderContainer from './main.header.container';
 
 const mapStateToProps = (state) => {
   return {
@@ -21,4 +21,4 @@ const mapDispatchToProps = {
   resetData_AC,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainHeaderView);
+export default connect(mapStateToProps, mapDispatchToProps)(MainHeaderContainer);
