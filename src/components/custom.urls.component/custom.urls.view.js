@@ -2,7 +2,7 @@
 import React from 'react';
 /* Components */
 import HeadingComponent from '../../components/heading.component';
-import CheckboxComponent from '../../components/checkbox.component';
+import UrlInputComponent from '../url.input.component';
 
 /**
  * @function sendDispatchAdd
@@ -32,7 +32,7 @@ export default (props) => {
       <div>
         {props.customData && props.customData.map((el, i) => {
           const inputName = `name${i}`;
-          return <CheckboxComponent inputName={inputName} key={i} i={i} el ={el} {...props} />
+          return <UrlInputComponent inputName={inputName} key={i} i={i} el ={el} {...props} />
         })}
       </div>
 

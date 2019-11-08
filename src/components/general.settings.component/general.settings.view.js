@@ -1,18 +1,8 @@
 /* Node Modules */
 import React from 'react';
 /* Components */
-import HeadingComponent from '../../components/heading.component';
-
-/**
- * @function checkClass
- * @desc change style based on checked
- * @author Anselm Marie
- * @param {boolean} checked - is checkbox is checked
- * @return {string}
- */
-const checkClass = (checked) => {
-  return checked ? 'is-checked' : 'not-checked';
-}
+import HeadingComponent from '../heading.component';
+import CheckboxComponent from '../checkbox.component';
 
 /**
  * @function General Settings
@@ -35,11 +25,9 @@ export default (props) => {
             const checkboxData = {index: i, name: el.name};
             return (
               <li key={i}>
-                <label name={el.name}>
-                  <input type="checkbox" name={el.name} data-checked={el.checked} onClick={() => props.modifyCheckbox_AC(props.type, checkboxData)} />
-                  <div className={`checkbox ${checkClass(el.checked)}`}></div>
-                  {el.name}
-                </label>
+                <CheckboxComponent
+                 onClick={() => props.modifyCheckbox_AC(props.type, checkboxData)}
+                 data={el} />
               </li>
             )
           })}

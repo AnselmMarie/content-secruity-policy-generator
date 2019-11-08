@@ -77,6 +77,7 @@ export default ($this) => {
 
           <form id="cspForm" onSubmit={(e) => checkStatus(e, $this)}>
             <textarea name="cspImportTextArea" id="cspBreakdownTextArea" rows="5" name="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" type="text" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />
+            You will lose any current information. Click "Import" if this is ok otherwise click "Cancel".
             <button id="cspBtn" className={`btn btn-primary ${getImportStatus($this.state.importCompleted)}`}>Import</button>
           </form>
 
