@@ -1,9 +1,9 @@
-/* Node Modules */
+/* Node Module */
 import React from 'react';
 
 /**
  * @function getClassName
- * @desc render the checkbox url view
+ * @desc determines if the class name will be from the param or the window location
  * @author Anselm Marie
  * @param {string} currentPage - current page from props
  * @return {string}
@@ -14,7 +14,7 @@ const getClassName = (currentPage) => {
 
 /**
  * @function Page Class View
- * @desc render the div to show the current page class view
+ * @desc dynamically display a class based on the current page
  * @author Anselm Marie
  * @param {object} props - content from the parent component
  * @return {JSX.Element}

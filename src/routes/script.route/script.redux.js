@@ -1,4 +1,4 @@
-/* Node Modules */
+/* Node Module */
 import { connect } from 'react-redux';
 /* Data Store */
 import {
@@ -10,13 +10,6 @@ import {
 /* Route Content */
 import ScriptView from './script.view';
 
-/**
- * @function mapStateToProps
- * @desc mapping the redux state to the props
- * @author Anselm Marie
- * @param {object} state - redux store
- * @return {object}
- */
 const mapStateToProps = (state) => {
   return {
     scriptGeneral: state.cspData.scriptGeneral,
@@ -24,11 +17,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-/**
- * @property mapDispatchToProps
- * @desc mapping the redux dispatch to the props
- * @author Anselm Marie
- */
 const mapDispatchToProps = {
   modifyCheckbox_AC,
   modifyUrl_AC,

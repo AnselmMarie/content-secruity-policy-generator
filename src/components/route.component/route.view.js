@@ -1,4 +1,4 @@
-/* Node Modules */
+/* Node Module */
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 /* Routes */
@@ -11,7 +11,13 @@ import FontRoute from '../../routes/font.route';
 import GenerateRoute from '../../routes/generate.route';
 import ErrRoute from '../../routes/err.route';
 
-export default ($this) => {
+/**
+ * @function Route View
+ * @desc renders the route jsx elements
+ * @author Anselm Marie
+ * @return {JSX.Element}
+ */
+export default () => {
   return (
     <Switch>
       <Route exact path="/" component={DefaultRoute} />

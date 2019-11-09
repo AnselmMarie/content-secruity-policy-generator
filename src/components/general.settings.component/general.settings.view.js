@@ -1,6 +1,6 @@
-/* Node Modules */
+/* Node Module */
 import React from 'react';
-/* Components */
+/* Component */
 import HeadingComponent from '../heading.component';
 import CheckboxComponent from '../checkbox.component';
 

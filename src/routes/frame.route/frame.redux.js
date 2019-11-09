@@ -1,4 +1,4 @@
-/* Node Modules */
+/* Node Module */
 import { connect } from 'react-redux';
 /* Data Store */
 import {

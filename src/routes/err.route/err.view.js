@@ -1,4 +1,4 @@
-/* Node Modules */
+/* Node Module */
 import React from 'react';
 
 export default () => {

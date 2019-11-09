@@ -1,4 +1,4 @@
-/* Node Modules */
-import GenerateRoute from './generate.view';
+/* Node Module */
+import GenerateRoute from './generate.redux';
 
 export default GenerateRoute;

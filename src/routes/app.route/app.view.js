@@ -1,10 +1,10 @@
-/* Node Modules */
+/* Node Module */
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-/* Components */
+/* Component */
 import NavigationComponent from '../../components/navigation.component';
 import RouteComponent from '../../components/route.component';
 import MainHeaderComponent from '../../components/main.header.component';

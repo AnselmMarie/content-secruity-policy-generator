@@ -1,6 +1,6 @@
-/* Node Modules */
+/* Node Module */
 import React from 'react';
-/* Components */
+/* Component */
 import HeadingComponent from '../heading.component';
 import CheckboxComponent from '../checkbox.component';
 
@@ -8,7 +8,7 @@ import CheckboxComponent from '../checkbox.component';
  * @function Main Header View
  * @desc render the checkbox url view
  * @author Anselm Marie
- * @param {object} $this - parent information data
+ * @param {object} $this - class content
  * @return {JSX.Element}
  */
 export default ($this) => {

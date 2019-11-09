@@ -1,6 +1,6 @@
-/* Node Modules */
+/* Node Module */
 import React from 'react';
-/* Components */
+/* Component */
 import HeadingComponent from '../../components/heading.component';
 import UrlInputComponent from '../url.input.component';
 

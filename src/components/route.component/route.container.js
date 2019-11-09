@@ -1,4 +1,4 @@
-/* Node Modules */
+/* Node Module */
 import React from 'react';
 /* Component Content */
 import view from './route.view';
