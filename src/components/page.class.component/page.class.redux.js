@@ -1,9 +1,7 @@
 /* Node Modules */
 import { connect } from 'react-redux';
-/* Data Store */
-import { currentPage_AC } from '../../data.store/actions';
 /* Component Content */
-import NavigationView from './navigation.view';
+import PageClassView from './page.class.view';
 
 /**
  * @function mapStateToProps
@@ -12,15 +10,18 @@ import NavigationView from './navigation.view';
  * @param {object} state - redux store
  * @return {object}
  */
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => {
+  return {
+    currentPage: state.pageData.currentPage,
+  }
+}
 
 /**
  * @property mapDispatchToProps
  * @desc mapping the redux dispatch to the props
  * @author Anselm Marie
  */
-const mapDispatchToProps = {
-  currentPage_AC,
-}
+const mapDispatchToProps = {}
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationView);
+
+export default connect(mapStateToProps, mapDispatchToProps)(PageClassView);

@@ -27,7 +27,7 @@ export default (props) => {
     <>
 
       <HeadingComponent heading="h3">
-        Custom Urls <span onClick={() => sendDispatchAdd(props)}>+</span>
+        Custom Urls <span className="cursor-pointer" onClick={() => sendDispatchAdd(props)}>+</span>
       </HeadingComponent>
       <div>
         {props.customData && props.customData.map((el, i) => {

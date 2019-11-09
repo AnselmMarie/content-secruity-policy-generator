@@ -49,6 +49,5 @@ export const FONT_DELETE_URL = `${FONT_SRC}_delete_url`;
 /* OTHER */
 export const RESET_DATA = 'reset_data';
 
-/* MODAL */
-export const MODAL_SHOW = 'modal_show';
-export const MODAL_HIDE = 'modal_hide';
+/* CURRENT PAGE */
+export const CURRENT_PAGE = 'current_page';

@@ -12,12 +12,16 @@
     height: 100vh;
   }
 
-}
+  main {
+    padding-right: 15px;
+  }
 
-main {
-  padding-right: 15px;
 }
 
 .hide {
   display: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

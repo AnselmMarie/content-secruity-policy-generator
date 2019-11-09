@@ -51,7 +51,7 @@ export const addUrl = (state, url, dataOfInterest) => {
   let clonedData = [...state[dataOfInterest]];
   let currentLength;
 
-  if (clonedData[0] === '') {
+  if (clonedData[0] === '' && url) {
     currentLength = 0;
   } else {
     currentLength = clonedData.length === 0 ? 1 : clonedData.length;

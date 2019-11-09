@@ -91,7 +91,7 @@ export default (state = initState, action) => {
       return { ...state, imgCustom: img2.clonedData };
 
     case (IMG_ADD_EMPTY_URL):
-      const img3 = addUrl(state, 'imgCustom');
+      const img3 = addUrl(state, null, 'imgCustom');
       return { ...state, imgCustom: img3 };
 
     case (IMG_ADD_URL):
@@ -115,7 +115,7 @@ export default (state = initState, action) => {
       return { ...state, styleCustom: style2.clonedData };
 
     case (STYLE_ADD_EMPTY_URL):
-      const style3 = addUrl(state, 'styleCustom');
+      const style3 = addUrl(state, null, 'styleCustom');
       return { ...state, styleCustom: style3 };
 
     case (STYLE_ADD_URL):
@@ -139,7 +139,7 @@ export default (state = initState, action) => {
       return { ...state, scriptCustom: script2.clonedData };
 
     case (SCRIPT_ADD_EMPTY_URL):
-      const script3 = addUrl(state, 'scriptCustom');
+      const script3 = addUrl(state, null, 'scriptCustom');
       return { ...state, scriptCustom: script3 };
 
     case (SCRIPT_ADD_URL):
@@ -163,7 +163,7 @@ export default (state = initState, action) => {
       return { ...state, frameCustom: frame2.clonedData };
 
     case (FRAME_ADD_EMPTY_URL):
-      const frame3 = addUrl(state, 'frameCustom');
+      const frame3 = addUrl(state, null, 'frameCustom');
       return { ...state, frameCustom: frame3 };
 
     case (FRAME_ADD_URL):
@@ -187,7 +187,7 @@ export default (state = initState, action) => {
       return { ...state, fontCustom: font2.clonedData };
 
     case (FONT_ADD_EMPTY_URL):
-      const font3 = addUrl(state, 'fontCustom');
+      const font3 = addUrl(state, null, 'fontCustom');
       return { ...state, fontCustom: font3 };
 
     case (FONT_ADD_URL):
