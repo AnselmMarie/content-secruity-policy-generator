@@ -1,28 +1,28 @@
 /* Node Module */
 import React from 'react';
 /* Component */
-import HeadingComponent from '../../components/heading.component';
+import HeadingComponent from '../heading.component';
 import UrlInputComponent from '../url.input.component';
+/* Component Content */
+import { IProps } from './custom.url.type';
 
 /**
  * @function sendDispatchAdd
  * @desc This will add an empty string in the csp store
  * @author Anselm Marie
  * @param {object} props - content from the parent component
- * @return {object}
  */
-const sendDispatchAdd = (props) => {
-  props.addEmptyUrl_AC(props.type);
+const sendDispatchAdd = (props: IProps): void => {
+  props.addEmptyUrl_AC(props.type, null);
 }
 
 /**
  * @function Custom Url
  * @desc render the custom url view
  * @author Anselm Marie
- * @param {object} props - content from the parent component
- * @return {JSX.Element}
+ * @param props - content from the parent component
  */
-export default (props) => {
+export default (props: IProps): JSX.Element => {
   return (
     <>
 
@@ -30,7 +30,8 @@ export default (props) => {
         Custom Urls <span className="cursor-pointer" onClick={() => sendDispatchAdd(props)}>+</span>
       </HeadingComponent>
       <div>
-        {props.customData && props.customData.map((el, i) => {
+        {props.customData && props.customData.map((el: any, i: number) => {
+          console.log('el', el);
           const inputName = `name${i}`;
           return <UrlInputComponent inputName={inputName} key={i} i={i} el ={el} {...props} />
         })}

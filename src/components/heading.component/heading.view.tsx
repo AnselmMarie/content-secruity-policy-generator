@@ -1,13 +1,15 @@
+/* Node Module */
 import React from 'react';
+/* Component Content */
+import { IProps } from './heading.type';
 
 /**
  * @function renderHeading
  * @desc Render the correct heading based on property given
  * @author Anselm Marie
  * @param {object} props - props sent from parent component
- * @return {JSX.Element} 
  */
-const renderHeading = (props) => {
+const renderHeading = (props: IProps): JSX.Element => {
   switch (props.heading) {
     case 'h1':
       return <h1>{props.children}</h1>;
@@ -25,6 +27,6 @@ const renderHeading = (props) => {
   }
 }
 
-export default (props) => {
+export default (props: IProps): JSX.Element => {
   return renderHeading(props);
 };
