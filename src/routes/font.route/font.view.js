@@ -7,6 +7,12 @@ import HeadingComponent from '../../components/heading.component';
 import GeneralSettingsComponent from '../../components/general.settings.component';
 import CustomUrlComponent from '../../components/custom.urls.component';
 
+/**
+ * @function Font View
+ * @desc rendering the view for the font route
+ * @author Anselm Marie
+ * @param {object} props - global property data
+ */
 export default (props) => {
   return (
     <>
