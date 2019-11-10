@@ -1,6 +1,5 @@
 /* Node Module */
 import React from 'react';
-import { cloneDeep } from 'lodash';
 /* Route Content */
 import GenerateView from './generate.view';
 import { generateState } from './generate.state';
@@ -21,7 +20,14 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
    * @desc temporary holds the csp data
    * @author Anselm Marie
    */
-  tempCSP = cloneDeep(this.props.cspData);
+  tempCSP = {
+    defaultData: '',
+    fontData: '',
+    frameData: '',
+    imgData: '',
+    scriptData: '',
+    styleData: '',
+  }
 
   componentDidMount() {
     // loader dispatch
@@ -33,7 +39,7 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
    * @desc iterating the csp data to start the progress of forming the data
    */
   iterateMainData = (): void => {
-    Object.entries(this.tempCSP).forEach(([key, val]) => {
+    Object.entries(this.props.cspData).forEach(([key, val]) => {
 
       let srcData;
 
@@ -225,8 +231,6 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
   }
 
   render() {
-    console.log('this', this);
-    console.log('------------');
     return GenerateView(this);
   }
 

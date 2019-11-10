@@ -18,7 +18,6 @@ export type TGenerateState = {
   scriptData: string,
   frameData: string,
   fontData: string,
-  tempCSP: ICspState|string,
 }
 
 export type TSrcData = {

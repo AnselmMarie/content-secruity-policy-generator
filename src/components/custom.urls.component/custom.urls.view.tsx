@@ -29,7 +29,6 @@ export default (props: ICustomUrlProps): JSX.Element => {
       </HeadingComponent>
       <div>
         {props.customData && props.customData.map((el: string, i: number) => {
-          console.log('el', el);
           const inputName = `name${i}`;
           return <UrlInputComponent inputName={inputName} key={i} i={i} el ={el} {...props} />
         })}

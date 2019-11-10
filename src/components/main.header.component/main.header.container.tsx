@@ -16,11 +16,11 @@ import {
 import generalDataEnum from '../../configs/enum/general.data.enum';
 import { IGeneralDataType } from '../../configs/enum/general.data.type';
 /* Component Content */
-import { IMainHeaderProps, IMainHeaderState } from './main.header.type';
+import { IMainHeaderState } from './main.header.type';
 
 const generalDataEnumData: IGeneralDataType[] = generalDataEnum;
 
-class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderState> {
+class MainHeaderContainer extends React.Component<any, IMainHeaderState> {
 
   /**
    * @prop {object} state
@@ -216,7 +216,6 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
    * @memberOf MainHeaderContainer
   */
   render() {
-    console.log('props', this.props);
     return MainHeaderView(this);
   }
 

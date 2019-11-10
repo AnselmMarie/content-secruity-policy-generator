@@ -15,7 +15,6 @@ import { IDefaultRouteProps } from './default.type';
  * @param props - global property data
  */
 export default (props: IDefaultRouteProps): JSX.Element => {
-  console.log('props General Settings', props.defaultGeneral);
   return(
     <>
 
