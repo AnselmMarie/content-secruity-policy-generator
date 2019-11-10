@@ -1,12 +1,11 @@
-/* Configs */
+/* Config */
 import cspConst from '../../configs/constants/csp.name.constants';
 
 /**
- * @property frameState
- * @desc Init frame data
- * @author Anselm Marie
+ * @property fontState
+ * @desc Init font data
  */
-const frameState = {
+const fontState = {
   generalData: [
     {
       name: cspConst.NONE,
@@ -47,4 +46,4 @@ const frameState = {
   customData: ['']
 };
 
-export default frameState;
+export default fontState;

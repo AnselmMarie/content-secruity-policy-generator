@@ -1,4 +1,4 @@
-/* Configs */
+/* Config */
 import cspConst from './constants/csp.name.constants';
 
 /**

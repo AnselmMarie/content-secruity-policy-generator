@@ -1,6 +1,6 @@
 /* Node Module */
 import React from 'react';
-/* Data Store */
+/* Store */
 import { FONT_SRC } from '../../store/csp/csp.constants';
 /* Component */
 import HeadingComponent from '../../components/heading.component';

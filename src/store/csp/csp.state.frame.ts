@@ -1,12 +1,11 @@
-/* Configs */
+/* Config */
 import cspConst from '../../configs/constants/csp.name.constants';
 
 /**
- * @property scriptState
- * @desc Init script data
- * @author Anselm Marie
+ * @property frameState
+ * @desc Init frame data
  */
-const scriptState = {
+const frameState = {
   generalData: [
     {
       name: cspConst.NONE,
@@ -47,4 +46,4 @@ const scriptState = {
   customData: ['']
 };
 
-export default scriptState;
+export default frameState;

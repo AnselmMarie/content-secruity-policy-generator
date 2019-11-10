@@ -1,6 +1,14 @@
 /* Node Module */
 import { cloneDeep } from 'lodash';
-/* Action Content */
+/* Modules */
+import {
+  updateChecked,
+  updateUrl,
+  addUrl,
+  deleteUrl
+} from '../../modules/redux.helper.module';
+/* CSP Content */
+import cspState from './csp.state';
 import {
   DEFAULT_MODIFY_CHECKBOX,
   DEFAULT_MODIFY_URL,
@@ -34,27 +42,30 @@ import {
   FONT_DELETE_URL,
   RESET_DATA,
 } from './csp.constants';
-/* Modules */
 import {
-  updateChecked,
-  updateUrl,
-  addUrl,
-  deleteUrl
-} from '../../modules/redux.helper.module';
-/* Reducer Content */
-import initState from './csp.state';
+  CspActionTypes,
+  ICspState,
+} from './csp.type';
 
+/**
+ * @property initState
+ * @desc init state of the the csp reducer
+ */
+const initState: ICspState = cspState;
+
+/**
+ * @property resetData
+ * @desc clone version of the initState for resetting purposes
+ */
 const resetData = cloneDeep(initState);
 
 /**
  * @function CSP Reducer
  * @desc This will update the csp store
- * @author Anselm Marie
- * @param {object} state = initState - this will be used to update the state on the first run
- * @param {object} action - the object that was initiated by the action
- * @return {object}
+ * @param state = initState - this will be used to update the state on the first run
+ * @param action - the object that was initiated by the action
  */
-export default (state = initState, action) => {
+export default (state = initState, action: CspActionTypes): ICspState => {
   const data = action.data;
   /**** DEFAULT-SRC ***/
   switch (action.type) {

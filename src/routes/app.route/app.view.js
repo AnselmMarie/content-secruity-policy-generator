@@ -9,7 +9,7 @@ import NavigationComponent from '../../components/navigation.component';
 import RouteComponent from '../../components/route.component';
 import MainHeaderComponent from '../../components/main.header.component';
 import PageClassComponent from '../../components/page.class.component';
-/* Data Store */
+/* Store */
 import configureStore from '../../store';
 
 const store = configureStore();

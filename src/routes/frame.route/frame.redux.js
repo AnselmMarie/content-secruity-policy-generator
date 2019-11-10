@@ -1,6 +1,6 @@
 /* Node Module */
 import { connect } from 'react-redux';
-/* Data Store */
+/* Store */
 import {
   modifyCheckbox_AC,
   modifyUrl_AC,

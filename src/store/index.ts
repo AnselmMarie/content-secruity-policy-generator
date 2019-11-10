@@ -1,6 +1,6 @@
 /* Node Module */
 import {combineReducers, createStore} from 'redux';
-/* Data Store */
+/* Store */
 import cspReducer from './csp/csp.reducer';
 import pageReducer from './page/page.reducer';
 

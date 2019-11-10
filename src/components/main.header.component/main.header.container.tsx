@@ -3,7 +3,7 @@ import React from 'react';
 /* Component Content */
 import { mainHeaderMessage, mainHeaderState }from './main.header.state';
 import MainHeaderView from './main.header.view';
-/* Data Store */
+/* Store */
 import {
   DEFAULT_SRC,
   IMG_SRC,

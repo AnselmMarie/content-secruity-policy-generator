@@ -1,16 +1,16 @@
 /* Store Content */
 import { CURRENT_PAGE } from './page.constants';
-import { ICurrentPage_AC } from './page.type';
+import {
+  ICurrentPage_AC,
+  UpdatePageAction,
+} from './page.type';
 
 /**
  * @function currentPage_AC
  * @desc store the current page content
- * @author Anselm Marie
- * @param {string} type - action type
- * @param {object} data - data needed for update to happen
- * @return {object}
+ * @param data - data needed for update to happen
  */
-export const currentPage_AC = (data: ICurrentPage_AC) => {
+export const currentPage_AC = (data: ICurrentPage_AC): UpdatePageAction => {
   return {
     type: CURRENT_PAGE,
     data,

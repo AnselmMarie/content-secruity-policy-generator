@@ -4,26 +4,24 @@ import {
 } from './page.constants';
 import {
   IPageState,
-  SystemActionTypes
+  PageActionTypes
  } from './page.type';
 /* Reducer Content */
 import pageState from './page.state';
 
 /**
- * @function CSP Reducer
- * @desc This will update the csp store
- * @author Anselm Marie
+ * @property initState
+ * @desc init state of the the page reducer
  */
 const initState: IPageState = pageState;
 
 /**
  * @function CSP Reducer
  * @desc This will update the csp store
- * @author Anselm Marie
- * @param {object} state = initState - this will be used to update the state on the first run
- * @param {object} action - the object that was initiated by the action
+ * @param state = initState - this will be used to update the state on the first run
+ * @param action - the object that was initiated by the action
  */
-export default (state = initState, action: SystemActionTypes): IPageState => {
+export default (state = initState, action: PageActionTypes): IPageState => {
   const data = action.data;
   /**** PAGE ***/
   switch (action.type) {

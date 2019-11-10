@@ -9,7 +9,6 @@ import fontState from './csp.state.font';
 /**
  * @property initState
  * @desc The default state of the csp reducer
- * @author Anselm Marie
  */
 const initState = {
   defaultGeneral: defaultState.generalData,

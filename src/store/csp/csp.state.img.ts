@@ -1,10 +1,9 @@
-/* Configs */
+/* Config */
 import cspConst from '../../configs/constants/csp.name.constants';
 
 /**
  * @property imgState
  * @desc Init img data
- * @author Anselm Marie
  */
 const imgState = {
   generalData: [

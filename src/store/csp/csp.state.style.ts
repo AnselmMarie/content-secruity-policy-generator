@@ -1,12 +1,11 @@
-/* Configs */
+/* Config */
 import cspConst from '../../configs/constants/csp.name.constants';
 
 /**
- * @property defaultState
- * @desc Init default data
- * @author Anselm Marie
+ * @property styleState
+ * @desc Init style data
  */
-const defaultState = {
+const styleState = {
   generalData: [
     {
       name: cspConst.NONE,
@@ -47,4 +46,4 @@ const defaultState = {
   customData: ['']
 };
 
-export default defaultState;
+export default styleState;

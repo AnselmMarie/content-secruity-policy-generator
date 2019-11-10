@@ -9,9 +9,9 @@ export interface ICurrentPage_AC {
   path: string;
 }
 
-interface UpdatePageAction {
+export interface UpdatePageAction {
   type: typeof CURRENT_PAGE;
   data: ICurrentPage_AC;
 }
 
-export type SystemActionTypes = UpdatePageAction;
+export type PageActionTypes = UpdatePageAction;
