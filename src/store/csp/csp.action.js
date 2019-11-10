@@ -1,7 +1,6 @@
 import {
   RESET_DATA,
-  CSP_GENERATED,
-} from './action.constants';
+} from './csp.constants';
 
 /**
  * @function modifyCheckbox_AC

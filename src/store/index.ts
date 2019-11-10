@@ -1,8 +1,8 @@
 /* Node Module */
 import {combineReducers, createStore} from 'redux';
 /* Data Store */
-import cspReducer from './csp.reducer';
-import pageReducer from './page.reducer';
+import cspReducer from './csp/csp.reducer';
+import pageReducer from './page/page.reducer';
 
 const rootReducer = combineReducers({
   cspData: cspReducer,

@@ -10,7 +10,7 @@ import RouteComponent from '../../components/route.component';
 import MainHeaderComponent from '../../components/main.header.component';
 import PageClassComponent from '../../components/page.class.component';
 /* Data Store */
-import configureStore from '../../data.store/reducers';
+import configureStore from '../../store';
 
 const store = configureStore();
 

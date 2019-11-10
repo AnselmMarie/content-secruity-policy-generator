@@ -5,8 +5,8 @@ import {
   modifyCheckbox_AC,
   addUrl_AC,
   resetData_AC,
-} from '../../data.store/actions';
-import { AppState } from '../../data.store/reducers';
+} from '../../store/csp/csp.action';
+import { AppState } from '../../store';
 // import {
 
 // } from '../../data.store/actions/action.constants';

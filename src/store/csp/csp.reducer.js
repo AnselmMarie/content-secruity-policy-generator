@@ -33,14 +33,14 @@ import {
   FONT_ADD_URL,
   FONT_DELETE_URL,
   RESET_DATA,
-} from '../../actions/action.constants';
+} from './csp.constants';
 /* Modules */
 import {
   updateChecked,
   updateUrl,
   addUrl,
   deleteUrl
-} from '../../../modules/redux.helper.module';
+} from '../../modules/redux.helper.module';
 /* Reducer Content */
 import initState from './csp.state';
 

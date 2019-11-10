@@ -11,7 +11,7 @@ import {
   SCRIPT_SRC,
   FRAME_SRC,
   FONT_SRC,
-} from '../../data.store/actions/action.constants';
+} from '../../store/csp/csp.constants';
 /* Config */
 import generalDataEnum from '../../configs/general.data.enum';
 /* Component Content */

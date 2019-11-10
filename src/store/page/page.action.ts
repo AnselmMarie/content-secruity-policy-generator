@@ -1,4 +1,6 @@
-import { CURRENT_PAGE } from './action.constants';
+/* Store Content */
+import { CURRENT_PAGE } from './page.constants';
+import { ICurrentPage_AC } from './page.type';
 
 /**
  * @function currentPage_AC
@@ -8,7 +10,7 @@ import { CURRENT_PAGE } from './action.constants';
  * @param {object} data - data needed for update to happen
  * @return {object}
  */
-export const currentPage_AC = (data) => {
+export const currentPage_AC = (data: ICurrentPage_AC) => {
   return {
     type: CURRENT_PAGE,
     data,

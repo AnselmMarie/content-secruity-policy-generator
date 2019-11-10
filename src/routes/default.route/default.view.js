@@ -1,7 +1,7 @@
 /* Node Module */
 import React from 'react';
 /* Data Store */
-import { DEFAULT_SRC } from '../../data.store/actions/action.constants';
+import { DEFAULT_SRC } from '../../store/csp/csp.constants';
 /* Component */
 import HeadingComponent from '../../components/heading.component';
 import GeneralSettingsComponent from '../../components/general.settings.component';

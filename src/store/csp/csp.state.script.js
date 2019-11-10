@@ -1,12 +1,12 @@
 /* Configs */
-import cspConst from '../../../configs/constants/csp.name.constants';
+import cspConst from '../../configs/constants/csp.name.constants';
 
 /**
- * @property fontState
- * @desc Init font data
+ * @property scriptState
+ * @desc Init script data
  * @author Anselm Marie
  */
-const fontState = {
+const scriptState = {
   generalData: [
     {
       name: cspConst.NONE,
@@ -47,4 +47,4 @@ const fontState = {
   customData: ['']
 };
 
-export default fontState;
+export default scriptState;

@@ -1,5 +1,5 @@
 /* Configs */
-import cspConst from '../../../configs/constants/csp.name.constants';
+import cspConst from '../../configs/constants/csp.name.constants';
 
 /**
  * @property styleState

@@ -1,12 +1,12 @@
 /* Configs */
-import cspConst from '../../../configs/constants/csp.name.constants';
+import cspConst from '../../configs/constants/csp.name.constants';
 
 /**
- * @property imgState
- * @desc Init img data
+ * @property defaultState
+ * @desc Init default data
  * @author Anselm Marie
  */
-const imgState = {
+const defaultState = {
   generalData: [
     {
       name: cspConst.NONE,
@@ -47,4 +47,4 @@ const imgState = {
   customData: ['']
 };
 
-export default imgState;
+export default defaultState;

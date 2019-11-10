@@ -6,7 +6,7 @@ import {
   modifyUrl_AC,
   addEmptyUrl_AC,
   deleteUrl_AC,
-} from '../../data.store/actions';
+} from '../../store/csp/csp.action';
 /* Route Content */
 import ScriptView from './script.view';
 

@@ -9,7 +9,7 @@ import React from 'react';
  * @return {string}
  */
 const getClassName = (currentPage) => {
-  return currentPage ? currentPage : window.location.pathname.replace('/', '');
+  return currentPage !== '' ? currentPage : window.location.pathname.replace('/', '');
 }
 
 /**
