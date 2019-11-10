@@ -7,13 +7,10 @@ import {
   resetData_AC,
 } from '../../store/csp/csp.action';
 import { AppState } from '../../store';
-// import {
-
-// } from '../../data.store/actions/action.constants';
 /* Component Content */
 import MainHeaderContainer from './main.header.container';
 
-const mapStateToProps = (state: AppState) => {
+const mapStateToProps = (state: AppState): any => {
   return {
     cspData: state.cspData,
   };

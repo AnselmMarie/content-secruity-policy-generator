@@ -18,7 +18,6 @@ const getClassName = (currentPage: any): string => {
  * @param props - content from the parent component
  */
 export default (props: IPageClass): JSX.Element => {
-  console.log('props', props);
   return (
     <div className={`app-contents ${getClassName(props.currentPage)}`}>
       {props.children}

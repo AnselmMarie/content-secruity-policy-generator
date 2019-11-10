@@ -216,6 +216,7 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
    * @memberOf MainHeaderContainer
   */
   render() {
+    console.log('props', this.props);
     return MainHeaderView(this);
   }
 

@@ -6,8 +6,15 @@ import { SCRIPT_SRC } from '../../store/csp/csp.constants';
 import HeadingComponent from '../../components/heading.component';
 import GeneralSettingsComponent from '../../components/general.settings.component';
 import CustomUrlComponent from '../../components/custom.urls.component';
+/* Component Content */
+import { IScriptRouteProps } from './script.type';
 
-export default (props) => {
+/**
+ * @function Script View
+ * @desc rendering the view for the frame route
+ * @param props - global Script data
+ */
+export default (props: IScriptRouteProps): JSX.Element => {
   return (
     <>
 

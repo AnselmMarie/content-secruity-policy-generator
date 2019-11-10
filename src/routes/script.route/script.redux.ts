@@ -7,13 +7,14 @@ import {
   addEmptyUrl_AC,
   deleteUrl_AC,
 } from '../../store/csp/csp.action';
+import { AppState } from '../../store';
 /* Route Content */
-import fontView from './font.view';
+import ScriptView from './script.view';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: AppState): any => {
   return {
-    fontGeneral: state.cspData.fontGeneral,
-    fontCustom: state.cspData.fontCustom,
+    scriptGeneral: state.cspData.scriptGeneral,
+    scriptCustom: state.cspData.scriptCustom,
   }
 }
 
@@ -24,5 +25,4 @@ const mapDispatchToProps = {
   deleteUrl_AC,
 }
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(fontView);
+export default connect(mapStateToProps, mapDispatchToProps)(ScriptView);

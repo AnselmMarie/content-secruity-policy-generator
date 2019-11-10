@@ -5,7 +5,7 @@ import { currentPage_AC } from '../../store/page/page.action';
 /* Component Content */
 import NavigationView from './navigation.view';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (): object => ({});
 
 const mapDispatchToProps = {
   currentPage_AC,

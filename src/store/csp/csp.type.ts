@@ -100,7 +100,7 @@ export interface IUpdateDeleteUrl_AC {
 
 export interface IUpdateResetData_AC {
   type: typeof RESET_DATA;
-  data?: any,
+  data?: undefined,
 }
 
 export interface ICspFtn_AC {

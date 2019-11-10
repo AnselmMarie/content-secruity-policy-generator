@@ -33,7 +33,7 @@ export default ($this: any): JSX.Element => {
             </div>}
 
           <form id="cspForm" onSubmit={$this.checkStatus}>
-            <textarea name="cspImportTextArea" id="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />
+            <textarea name="cspImportTextArea" rows={5} id="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />
             {$this.state.importCompleted &&
             <div>
               <CheckboxComponent
@@ -49,4 +49,3 @@ export default ($this: any): JSX.Element => {
     </>
   );
 };
-// rows="5" type="text"

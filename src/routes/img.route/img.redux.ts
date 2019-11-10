@@ -7,21 +7,22 @@ import {
   addEmptyUrl_AC,
   deleteUrl_AC,
 } from '../../store/csp/csp.action';
+import { AppState } from '../../store';
 /* Route Content */
-import StyleView from './style.view';
+import ImgView from './img.view';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: AppState): any => {
   return {
-    styleGeneral: state.cspData.styleGeneral,
-    styleCustom: state.cspData.styleCustom,
+    imgGeneral: state.cspData.imgGeneral,
+    imgCustom: state.cspData.imgCustom,
   }
-}
+};
 
 const mapDispatchToProps = {
   modifyCheckbox_AC,
   modifyUrl_AC,
   addEmptyUrl_AC,
   deleteUrl_AC,
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(StyleView);
+export default connect(mapStateToProps, mapDispatchToProps)(ImgView);

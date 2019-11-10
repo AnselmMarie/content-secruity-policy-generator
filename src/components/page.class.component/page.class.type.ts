@@ -1,4 +1,4 @@
 export type IPageClass = {
-  currentPage: string,
+  currentPage?: string,
   children: React.ReactNode,
 }

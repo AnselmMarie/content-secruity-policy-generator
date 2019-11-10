@@ -4,8 +4,15 @@ import { cloneDeep } from 'lodash';
 /* Route Content */
 import GenerateView from './generate.view';
 import { generateState } from './generate.state';
+import {
+  IGenerateProps,
+  TGenerateState,
+  TSrcData,
+} from './generate.type';
+/* Config */
+import { TGlobalCheckbox } from 'configs/types/global.type';
 
-class GenerateContainer extends React.Component {
+class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> {
 
   state = generateState;
 
@@ -24,9 +31,8 @@ class GenerateContainer extends React.Component {
   /**
    * @function iterateMainData
    * @desc iterating the csp data to start the progress of forming the data
-   * @author Anselm Marie
    */
-  iterateMainData = () => {
+  iterateMainData = (): void => {
     Object.entries(this.tempCSP).forEach(([key, val]) => {
 
       let srcData;
@@ -54,10 +60,9 @@ class GenerateContainer extends React.Component {
   /**
    * @function getSrcData
    * @desc getting the src data based on the key provided
-   * @author Anselm Marie
-   * @param {array} key - src name
+   * @param key - src name
    */
-  getSrcData = (key) => {
+  getSrcData = (key: string): TSrcData => {
     switch (key) {
       case 'defaultGeneral':
       case 'defaultCustom':
@@ -109,14 +114,13 @@ class GenerateContainer extends React.Component {
   /**
    * @function iterateGeneralData
    * @desc iterating the general data to use data that was checked
-   * @author Anselm Marie
-   * @param {array} data - content for current general src
-   * @param {string} srcData - the src data based on the current data given
+   * @param data - content for current general src
+   * @param srcData - the src data based on the current data given
    */
-  iterateGeneralData = (data, srcData) => {
+  iterateGeneralData = (data: TGlobalCheckbox[], srcData: TSrcData): void => {
     let currentData = srcData.data;
 
-    data.forEach((el) => {
+    data.forEach((el: TGlobalCheckbox) => {
       if (el.checked) {
 
         let val;
@@ -144,13 +148,13 @@ class GenerateContainer extends React.Component {
    * @function iterateCustomData
    * @desc iterating all the urls in one string
    * @author Anselm Marie
-   * @param {array} data - content for current custom src
-   * @param {string} srcData - the src data based on the current data given
+   * @param data - content for current custom src
+   * @param srcData - the src data based on the current data given
    */
-  iterateCustomData = (data, srcData) => {
+  iterateCustomData = (data: string[], srcData: TSrcData) => {
     let currentData = srcData.data;
 
-    data.forEach((el) => {
+    data.forEach((el: string) => {
       if (el) {
         if (!currentData) {
           currentData = `${el}`;
@@ -171,11 +175,8 @@ class GenerateContainer extends React.Component {
   /**
    * @function createCspGenerateData
    * @desc iterating all the urls in one string
-   * @author Anselm Marie
-   * @param {array} data - content for current custom src
-   * @param {string} srcData - the src data based on the current data given
    */
-  createCspGenerateData = () => {
+  createCspGenerateData = (): void => {
     let cspString = '';
     const dataLoop = [
       {
@@ -204,8 +205,6 @@ class GenerateContainer extends React.Component {
       }
     ];
 
-    console.log('dataLoop', dataLoop);
-
     dataLoop.forEach((el) => {
 
       const currentData = `${el.name} ${el.data}`;
@@ -226,7 +225,7 @@ class GenerateContainer extends React.Component {
   }
 
   render() {
-    console.log('this.state', this.state);
+    console.log('this', this);
     console.log('------------');
     return GenerateView(this);
   }

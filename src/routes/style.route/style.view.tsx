@@ -6,8 +6,10 @@ import { STYLE_SRC } from '../../store/csp/csp.constants';
 import HeadingComponent from '../../components/heading.component';
 import GeneralSettingsComponent from '../../components/general.settings.component';
 import CustomUrlComponent from '../../components/custom.urls.component';
+/* Component Content */
+import { IStyleRouteProps } from './style.type';
 
-export default (props) => {
+export default (props: IStyleRouteProps) => {
   return (
     <>
 

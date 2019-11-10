@@ -9,10 +9,9 @@ import './generate.scss';
 /**
  * @function Generate View
  * @desc rendering the view for the generate route
- * @author Anselm Marie
- * @param {object} $this - class contents
+ * @param $this - class contents
  */
-export default ($this) => {
+export default ($this: any): JSX.Element => {
   return (
     <>
 
