@@ -8,3 +8,6 @@ import {
 
 export interface IDefaultRouteProps extends RouteComponentProps, Partial<ICspFtn_AC>, Partial<ICspState> {
 }
+
+export interface IDefaultReduxState extends Partial<ICspFtn_AC>, Partial<ICspState> {
+}

@@ -30,7 +30,7 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
   }
 
   componentDidMount() {
-    // loader dispatch
+    this.props.showLoader_AC();
     this.iterateMainData();
   }
 
@@ -227,6 +227,8 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
       cspGenerate: cspString,
       ...this.tempCSP,
     })
+
+    this.props.hideLoader_AC();
 
   }
 

@@ -1,13 +1,13 @@
-// /* Node Module */
-// import { RouteComponentProps } from 'react-router-dom';
-// RouteComponentProps,
 /* Store */
 import {
   ICspFtn_AC,
   ICspState,
 } from '../../store/csp/csp.type';
+import {
+  ILoaderFtn_AC,
+} from '../../store/loader/loader.type';
 
-export interface IMainHeaderProps extends Partial<ICspFtn_AC> {
+export interface IMainHeaderProps extends Partial<ICspFtn_AC>, Partial<ILoaderFtn_AC> {
   cspData: ICspState,
 }
 

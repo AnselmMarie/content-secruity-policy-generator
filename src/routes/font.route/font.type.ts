@@ -8,3 +8,6 @@ import {
 
 export interface IFontRouteProps extends RouteComponentProps, Partial<ICspFtn_AC>, Partial<ICspState> {
 }
+
+export interface IFontReduxState extends Partial<ICspFtn_AC>, Partial<ICspState> {
+}

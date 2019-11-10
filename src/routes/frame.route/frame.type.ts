@@ -8,3 +8,6 @@ import {
 
 export interface IFrameRouteProps extends RouteComponentProps, Partial<ICspFtn_AC>, Partial<ICspState> {
 }
+
+export interface IFrameReduxState extends Partial<ICspFtn_AC>, Partial<ICspState> {
+}

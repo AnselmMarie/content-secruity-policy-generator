@@ -8,3 +8,6 @@ import {
 
 export interface IScriptRouteProps extends RouteComponentProps, Partial<ICspFtn_AC>, Partial<ICspState> {
 }
+
+export interface IScriptReduxState extends Partial<ICspFtn_AC>, Partial<ICspState>  {
+}

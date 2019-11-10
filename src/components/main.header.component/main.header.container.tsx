@@ -16,11 +16,11 @@ import {
 import generalDataEnum from '../../configs/enum/general.data.enum';
 import { IGeneralDataType } from '../../configs/enum/general.data.type';
 /* Component Content */
-import { IMainHeaderState } from './main.header.type';
+import { IMainHeaderProps, IMainHeaderState } from './main.header.type';
 
 const generalDataEnumData: IGeneralDataType[] = generalDataEnum;
 
-class MainHeaderContainer extends React.Component<any, IMainHeaderState> {
+class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderState> {
 
   /**
    * @prop {object} state
@@ -50,22 +50,19 @@ class MainHeaderContainer extends React.Component<any, IMainHeaderState> {
    */
   checkStatus = (e: React.ChangeEvent<any>): void => {
     e.preventDefault();
-    // const formClass = e.target.elements.cspBtn.className;
+
+    this.props.showLoader_AC();
     const inputData = e.target.elements.cspBreakdownTextArea.value;
 
     // If data doesn't exist display error
     if (!inputData) {
       alert('hi');
+      this.props.hideLoader_AC();
       return;
     }
 
     this.importData(inputData);
 
-    // if (formClass.includes('csp-start-progress')) {
-    //   importData(inputData, e);
-    // } else if (formClass.includes('csp-reset-progress')) {
-    //   console.log('csp-reset-progress');
-    // }
   }
 
     /**
@@ -135,6 +132,8 @@ class MainHeaderContainer extends React.Component<any, IMainHeaderState> {
         inputData: '',
       });
     }
+
+    this.props.hideLoader_AC();
 
   }
 

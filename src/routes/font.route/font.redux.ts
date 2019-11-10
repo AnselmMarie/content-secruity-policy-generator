@@ -10,8 +10,9 @@ import {
 import { AppState } from '../../store';
 /* Route Content */
 import fontView from './font.view';
+import { IFontReduxState } from './font.type';
 
-const mapStateToProps = (state: AppState): any => {
+const mapStateToProps = (state: AppState): IFontReduxState => {
   return {
     fontGeneral: state.cspData.fontGeneral,
     fontCustom: state.cspData.fontCustom,

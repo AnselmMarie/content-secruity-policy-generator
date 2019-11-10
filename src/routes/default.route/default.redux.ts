@@ -10,8 +10,9 @@ import {
 import { AppState } from '../../store';
 /* Route Content */
 import defaultView from './default.view';
+import { IDefaultReduxState } from './default.type';
 
-const mapStateToProps = (state: AppState): any => {
+const mapStateToProps = (state: AppState): IDefaultReduxState => {
   return {
     defaultGeneral: state.cspData.defaultGeneral,
     defaultCustom: state.cspData.defaultCustom,

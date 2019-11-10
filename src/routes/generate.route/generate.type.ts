@@ -5,8 +5,15 @@ import {
   ICspState,
   ICspFtn_AC,
 } from '../../store/csp/csp.type';
+import {
+  ILoaderFtn_AC,
+} from '../../store/loader/loader.type';
 
-export interface IGenerateProps extends RouteComponentProps, Partial<ICspFtn_AC> {
+export interface IGenerateProps extends RouteComponentProps, Partial<ICspFtn_AC>, Partial<ILoaderFtn_AC> {
+  cspData: ICspState,
+}
+
+export type TGenerateReduxState = {
   cspData: ICspState,
 }
 

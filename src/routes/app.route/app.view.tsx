@@ -9,6 +9,7 @@ import NavigationComponent from '../../components/navigation.component';
 import RouteComponent from '../../components/route.component';
 import MainHeaderComponent from '../../components/main.header.component';
 import PageClassComponent from '../../components/page.class.component';
+import LoaderComponent from '../../components/loader.component';
 /* Store */
 import configureStore from '../../store';
 
@@ -27,6 +28,7 @@ export default (): JSX.Element => {
     <Provider store={store}>
       <Router>
         <PageClassComponent>
+          <LoaderComponent />
           <aside className="side-area">
             <NavigationComponent />
           </aside>

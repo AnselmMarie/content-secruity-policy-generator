@@ -8,3 +8,6 @@ import {
 
 export interface IImgRouteProps extends RouteComponentProps, Partial<ICspFtn_AC>, Partial<ICspState> {
 }
+
+export interface IImgReduxState extends Partial<ICspFtn_AC>, Partial<ICspState> {
+}

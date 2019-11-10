@@ -2,10 +2,11 @@
 import { connect } from 'react-redux';
 /* Component Content */
 import PageClassView from './page.class.view';
+import { IPageReduxState } from './page.class.type';
 /* Store */
 import { AppState} from '../../store';
 
-const mapStateToProps = (state: AppState): any => {
+const mapStateToProps = (state: AppState): IPageReduxState => {
   return {
     currentPage: state.pageData.currentPage,
   }

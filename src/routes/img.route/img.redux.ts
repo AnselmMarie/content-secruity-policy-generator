@@ -10,8 +10,9 @@ import {
 import { AppState } from '../../store';
 /* Route Content */
 import ImgView from './img.view';
+import { IImgReduxState } from './img.type';
 
-const mapStateToProps = (state: AppState): any => {
+const mapStateToProps = (state: AppState): IImgReduxState => {
   return {
     imgGeneral: state.cspData.imgGeneral,
     imgCustom: state.cspData.imgCustom,

@@ -10,8 +10,9 @@ import {
 import { AppState } from '../../store';
 /* Route Content */
 import ScriptView from './script.view';
+import { IScriptReduxState } from './script.type';
 
-const mapStateToProps = (state: AppState): any => {
+const mapStateToProps = (state: AppState): IScriptReduxState => {
   return {
     scriptGeneral: state.cspData.scriptGeneral,
     scriptCustom: state.cspData.scriptCustom,

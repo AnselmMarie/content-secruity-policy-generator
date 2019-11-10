@@ -12,3 +12,6 @@ export interface IStyleRouteProps extends RouteComponentProps, Partial<ICspFtn_A
   i: number,
   checked: boolean,
 }
+
+export interface IStyleReduxState extends Partial<ICspFtn_AC>, Partial<ICspState> {
+}

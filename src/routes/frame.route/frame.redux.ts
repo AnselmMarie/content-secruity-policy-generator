@@ -10,8 +10,9 @@ import {
 import { AppState } from '../../store';
 /* Route Content */
 import frameView from './frame.view';
+import { IFrameReduxState } from './frame.type';
 
-const mapStateToProps = (state: AppState): any => {
+const mapStateToProps = (state: AppState): IFrameReduxState => {
   return {
     frameGeneral: state.cspData.frameGeneral,
     frameCustom: state.cspData.frameCustom,

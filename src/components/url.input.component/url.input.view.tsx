@@ -48,7 +48,7 @@ const sendDispatchDelete = (props: IUrlInputProps): void => {
  * @param i - index of data
  * @param customData - index of data
  */
-const columnCheck = (i: number, customData: any): boolean => {
+const columnCheck = (i: number, customData: string[]): boolean => {
 
   i = i + 1;
 

@@ -1,0 +1,19 @@
+.loader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.loader {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}

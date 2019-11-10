@@ -10,8 +10,9 @@ import {
 import { AppState } from '../../store';
 /* Route Content */
 import StyleView from './style.view';
+import { IStyleReduxState } from './style.type';
 
-const mapStateToProps = (state: AppState): any => {
+const mapStateToProps = (state: AppState): IStyleReduxState => {
   return {
     styleGeneral: state.cspData.styleGeneral,
     styleCustom: state.cspData.styleCustom,
