@@ -4,14 +4,14 @@ import React from 'react';
 import HeadingComponent from '../heading.component';
 import CheckboxComponent from '../checkbox.component';
 /* Component Content */
-import { IProps } from './general.settings.type';
+import { IGeneralSettingsProps } from './general.settings.type';
 
 /**
  * @function General Settings
  * @desc rendering the view for the general settings component
  * @param props - global property data
  */
-export default (props: IProps): JSX.Element => {
+export default (props: IGeneralSettingsProps): JSX.Element => {
   return (
     <>
 

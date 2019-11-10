@@ -1,7 +1,7 @@
 /* Node Module */
 import React from 'react';
 /* Component Content */
-import { IProps } from './url.input.type';
+import { IUrlInputProps } from './url.input.type';
 
 /**
  * @property theNextSplit
@@ -27,7 +27,7 @@ let dataLength: number|null = null;
  * @param e - event object of element
  * @param props - content from the parent component
  */
-const sendDispatchModify = (e: React.ChangeEvent<HTMLButtonElement>, props: IProps): void => {
+const sendDispatchModify = (e: React.ChangeEvent<HTMLButtonElement>, props: IUrlInputProps): void => {
   const urlData = { index: props.i, url: e.currentTarget.value };
   props.modifyUrl_AC(props.type, urlData);
 }
@@ -37,7 +37,7 @@ const sendDispatchModify = (e: React.ChangeEvent<HTMLButtonElement>, props: IPro
  * @desc This will delete a string in the csp store
  * @param props - content from the parent component
  */
-const sendDispatchDelete = (props: IProps): void => {
+const sendDispatchDelete = (props: IUrlInputProps): void => {
   const urlData = { index: props.i };
   props.deleteUrl_AC(props.type, urlData);
 }
@@ -77,7 +77,7 @@ const columnCheck = (i: number, customData: any): boolean => {
  * @desc render the url input view
  * @param props - content from the parent component
  */
-export default (props: IProps): JSX.Element => {
+export default (props: IUrlInputProps): JSX.Element => {
   return (
     <>
 

@@ -14,4 +14,8 @@ export interface UpdatePageAction {
   data: ICurrentPage_AC;
 }
 
+export interface IPageFtn_AC {
+  currentPage_AC: (data: ICurrentPage_AC) => void,
+}
+
 export type PageActionTypes = UpdatePageAction;

@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    main: './src/routes/app.route/index.js',
+    main: './src/routes/app.route/index.tsx',
     // vendor: './src/assets/js/vendor.js',
   },
   resolve: {

@@ -1,7 +1,6 @@
-export type IProps = {
-  addEmptyUrl_AC: (type: string, urlData: any) => void,
-  deleteUrl_AC: (type: string, urlData: any) => void,
-  modifyUrl_AC: (type: string, urlData: any) => void,
+import { ICspFtn_AC } from '../../store/csp/csp.type';
+
+export interface ICustomUrlProps extends Partial<ICspFtn_AC> {
   customData: string[],
   el: string,
   inputName: string,

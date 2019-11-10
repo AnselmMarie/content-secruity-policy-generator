@@ -1,25 +1,24 @@
 /* Node Module */
 import React from 'react';
+/* Component Content */
+import { IPageClass } from './page.class.type';
 
 /**
  * @function getClassName
  * @desc determines if the class name will be from the param or the window location
- * @author Anselm Marie
- * @param {string} currentPage - current page from props
- * @return {string}
+ * @param currentPage - current page from props
  */
-const getClassName = (currentPage) => {
+const getClassName = (currentPage: any): string => {
   return currentPage !== '' ? currentPage : window.location.pathname.replace('/', '');
 }
 
 /**
  * @function Page Class View
  * @desc dynamically display a class based on the current page
- * @author Anselm Marie
- * @param {object} props - content from the parent component
- * @return {JSX.Element}
+ * @param props - content from the parent component
  */
-export default (props) => {
+export default (props: IPageClass): JSX.Element => {
+  console.log('props', props);
   return (
     <div className={`app-contents ${getClassName(props.currentPage)}`}>
       {props.children}

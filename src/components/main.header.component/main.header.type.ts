@@ -1,9 +1,9 @@
 /* Node Module */
 import { RouteComponentProps } from 'react-router-dom';
 /* Store */
-import { IFtn_AC } from '../../store/csp/csp.type';
+import { ICspFtn_AC } from '../../store/csp/csp.type';
 
-export interface IMainHeaderProps extends RouteComponentProps, Partial<IFtn_AC> {
+export interface IMainHeaderProps extends RouteComponentProps, Partial<ICspFtn_AC> {
   cspData: object,
 }
 

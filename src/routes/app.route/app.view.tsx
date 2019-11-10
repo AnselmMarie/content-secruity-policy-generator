@@ -12,15 +12,17 @@ import PageClassComponent from '../../components/page.class.component';
 /* Store */
 import configureStore from '../../store';
 
+/**
+ * @function Store
+ * @desc configuration of the redux store
+ */
 const store = configureStore();
 
 /**
  * @function App View
  * @desc render the app view
- * @author Anselm Marie
- * @return {JSX.Element}
  */
-export default () => {
+export default (): JSX.Element => {
   return (
     <Provider store={store}>
       <Router>

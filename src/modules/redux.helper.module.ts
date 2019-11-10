@@ -13,7 +13,6 @@ import {
 /**
  * @function updateChecked
  * @desc update the check data
- * @author Anselm Marie
  * @param state = the current state of this store
  * @param data - data send from action creator
  * @param dataOfInterest - the data that needs to be checked

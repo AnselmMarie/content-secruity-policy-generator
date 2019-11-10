@@ -1,17 +1,6 @@
-export type IProps = {
+import { ICspFtn_AC } from '../../store/csp/csp.type';
+
+export interface IGeneralSettingsProps extends Partial<ICspFtn_AC> {
   generalData: string[],
-  modifyCheckbox_AC: (type: string, checkboxData: ICheckbox) => void,
   type: string,
-}
-
-export type IElData = {
-  name: string,
-  val: string,
-  checked: boolean,
-  // array: string[],
-}
-
-type ICheckbox = {
-  index: number,
-  name: string,
 }

@@ -4,15 +4,15 @@ import React from 'react';
 import HeadingComponent from '../heading.component';
 import UrlInputComponent from '../url.input.component';
 /* Component Content */
-import { IProps } from './custom.url.type';
+import { ICustomUrlProps } from './custom.url.type';
 
 /**
  * @function sendDispatchAdd
  * @desc This will add an empty string in the csp store
  * @param {object} props - content from the parent component
  */
-const sendDispatchAdd = (props: IProps): void => {
-  props.addEmptyUrl_AC(props.type, null);
+const sendDispatchAdd = (props: ICustomUrlProps): void => {
+  props.addEmptyUrl_AC(props.type);
 }
 
 /**
@@ -20,7 +20,7 @@ const sendDispatchAdd = (props: IProps): void => {
  * @desc render the custom url view
  * @param props - content from the parent component
  */
-export default (props: IProps): JSX.Element => {
+export default (props: ICustomUrlProps): JSX.Element => {
   return (
     <>
 

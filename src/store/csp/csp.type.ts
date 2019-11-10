@@ -55,7 +55,7 @@ interface generalData {
 
 export interface IUrlData_AC {
   index?: number;
-  url: string;
+  url?: string;
 }
 
 export interface ICheckboxData_AC {
@@ -103,7 +103,7 @@ export interface IUpdateResetData_AC {
   data?: any,
 }
 
-export interface IFtn_AC {
+export interface ICspFtn_AC {
   addEmptyUrl_AC: (type: string) => void,
   deleteUrl_AC: (type: string, data: IUrlData_AC) => void,
   modifyUrl_AC: (type: string, data: IUrlData_AC) => void,

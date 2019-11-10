@@ -1,4 +1,6 @@
 {
+  "buildOnSave": true,
+  "compileOnSave": true,
   "compilerOptions": {
     "outDir": "build/lib",
     "module": "commonjs",
@@ -20,6 +22,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "strictNullChecks": false,
+    "removeComments": true,
     "resolveJsonModule": true
   },
   "include": [

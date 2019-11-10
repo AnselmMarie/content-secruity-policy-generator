@@ -1,7 +1,7 @@
 /* Node Module */
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-/* Routes */
+/* Route */
 import DefaultRoute from '../../routes/default.route';
 import ImgRoute from '../../routes/img.route';
 import StyleRoute from '../../routes/style.route';
@@ -14,10 +14,8 @@ import ErrRoute from '../../routes/err.route';
 /**
  * @function Route View
  * @desc renders the route jsx elements
- * @author Anselm Marie
- * @return {JSX.Element}
  */
-export default () => {
+export default (): JSX.Element => {
   return (
     <Switch>
       <Route exact path="/" component={DefaultRoute} />
