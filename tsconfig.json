@@ -19,7 +19,7 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
   },
   "include": [
     "src/**/*"

@@ -10,8 +10,9 @@ import RouteComponent from '../../components/route.component';
 import MainHeaderComponent from '../../components/main.header.component';
 import PageClassComponent from '../../components/page.class.component';
 /* Data Store */
-import store from '../../data.store/reducers';
+import configureStore from '../../data.store/reducers';
 
+const store = configureStore();
 
 /**
  * @function App View

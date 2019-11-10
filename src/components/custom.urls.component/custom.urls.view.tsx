@@ -9,7 +9,6 @@ import { IProps } from './custom.url.type';
 /**
  * @function sendDispatchAdd
  * @desc This will add an empty string in the csp store
- * @author Anselm Marie
  * @param {object} props - content from the parent component
  */
 const sendDispatchAdd = (props: IProps): void => {
@@ -19,7 +18,6 @@ const sendDispatchAdd = (props: IProps): void => {
 /**
  * @function Custom Url
  * @desc render the custom url view
- * @author Anselm Marie
  * @param props - content from the parent component
  */
 export default (props: IProps): JSX.Element => {
@@ -30,8 +28,7 @@ export default (props: IProps): JSX.Element => {
         Custom Urls <span className="cursor-pointer" onClick={() => sendDispatchAdd(props)}>+</span>
       </HeadingComponent>
       <div>
-        {props.customData && props.customData.map((el: any, i: number) => {
-          console.log('el', el);
+        {props.customData && props.customData.map((el: string, i: number) => {
           const inputName = `name${i}`;
           return <UrlInputComponent inputName={inputName} key={i} i={i} el ={el} {...props} />
         })}

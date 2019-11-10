@@ -6,8 +6,7 @@ import { IProps } from './heading.type';
 /**
  * @function renderHeading
  * @desc Render the correct heading based on property given
- * @author Anselm Marie
- * @param {object} props - props sent from parent component
+ * @param props - props sent from parent component
  */
 const renderHeading = (props: IProps): JSX.Element => {
   switch (props.heading) {

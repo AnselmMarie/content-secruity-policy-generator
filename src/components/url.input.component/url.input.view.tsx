@@ -19,7 +19,7 @@ let rowSplit: number = 3;
  * @property dataLength
  * @desc the data length
  */
-let dataLength: number = null;
+let dataLength: number|null = null;
 
 /**
  * @function sendDispatchModify
@@ -45,7 +45,6 @@ const sendDispatchDelete = (props: IProps): void => {
 /**
  * @function columnCheck
  * @desc This will delete a string in the csp store
- * @author Anselm Marie
  * @param i - index of data
  * @param customData - index of data
  */
@@ -76,9 +75,7 @@ const columnCheck = (i: number, customData: any): boolean => {
 /**
  * @function Url Input View
  * @desc render the url input view
- * @author Anselm Marie
- * @param {object} props - content from the parent component
- * @return {JSX.Element}
+ * @param props - content from the parent component
  */
 export default (props: IProps): JSX.Element => {
   return (

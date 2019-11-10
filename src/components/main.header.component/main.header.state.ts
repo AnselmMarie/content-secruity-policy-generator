@@ -1,7 +1,6 @@
 export const mainHeaderState = {
   importCompleted: false,
-  inputData: null,
-  eventForm: null,
+  inputData: '',
   reImportCheckbox: {
     label: 'You will lose any current information. Click "Import" if this is ok otherwise click "Cancel".',
     checked: false,
@@ -12,10 +11,10 @@ export const mainHeaderState = {
 export const mainHeaderMessage = {
   errorMessage: {
     show: false,
-    message: null,
+    message: '',
   },
   successMessage: {
     show: false,
-    message: null,
+    message: '',
   },
 }

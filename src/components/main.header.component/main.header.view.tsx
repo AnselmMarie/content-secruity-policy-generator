@@ -10,8 +10,8 @@ import CheckboxComponent from '../checkbox.component';
  * @author Anselm Marie
  * @param {object} $this - class content
  * @return {JSX.Element}
- */
-export default ($this) => {
+ *///React.Component<IMainHeaderProps, any, any>
+export default ($this: any): JSX.Element => {
   return (
     <>
 
@@ -35,7 +35,7 @@ export default ($this) => {
             </div>}
 
           <form id="cspForm" onSubmit={$this.checkStatus}>
-            <textarea name="cspImportTextArea" id="cspBreakdownTextArea" rows="5" name="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" type="text" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />
+            <textarea name="cspImportTextArea" id="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />
             {$this.state.importCompleted &&
             <div>
               <CheckboxComponent
@@ -51,3 +51,4 @@ export default ($this) => {
     </>
   );
 };
+// rows="5" type="text"

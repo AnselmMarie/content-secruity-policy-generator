@@ -14,8 +14,10 @@ import {
 } from '../../data.store/actions/action.constants';
 /* Config */
 import generalDataEnum from '../../configs/general.data.enum';
+/* Component Content */
+import { IMainHeaderProps, IMainHeaderState } from './main.header.type';
 
-class MainHeaderContainer extends React.Component {
+class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderState> {
 
   /**
    * @prop {object} state
@@ -30,25 +32,22 @@ class MainHeaderContainer extends React.Component {
   /**
    * @function getImportStatus
    * @desc changes class name based on import status
-   * @author Anselm Marie
-   * @param {boolean} importCompleted - if import status was already done
    * @memberOf MainHeaderContainer
-   * @return {string}
+   * @param importCompleted - if import status was already done
    */
-  getImportStatus = (importCompleted) => {
+  getImportStatus = (importCompleted: boolean): string => {
     return importCompleted ? 'csp-reset-progress' : 'csp-start-progress';
   }
 
   /**
    * @function checkStatus
    * @desc render the checkbox url view
-   * @author Anselm Marie
-   * @param {object} e - event from the submit
    * @memberOf MainHeaderContainer
+   * @param {object} e - event from the submit
    */
-  checkStatus = (e) => {
+  checkStatus = (e: React.ChangeEvent<any>): void => {
     e.preventDefault();
-    const formClass = e.target.elements.cspBtn.className;
+    // const formClass = e.target.elements.cspBtn.className;
     const inputData = e.target.elements.cspBreakdownTextArea.value;
 
     // If data doesn't exist display error
@@ -57,7 +56,7 @@ class MainHeaderContainer extends React.Component {
       return;
     }
 
-    this.importData(inputData, e);
+    this.importData(inputData);
 
     // if (formClass.includes('csp-start-progress')) {
     //   importData(inputData, e);
@@ -69,34 +68,31 @@ class MainHeaderContainer extends React.Component {
     /**
    * @function updateCheckbox
    * @desc render the checkbox url view
-   * @author Anselm Marie
    * @memberOf MainHeaderContainer
    */
-  updateCheckbox = () => {
-    let reImportCheckbox = this.state.reImportCheckbox;
-    reImportCheckbox.checked = !reImportCheckbox.checked;
+  updateCheckbox = (): void => {
+    let checkbox = this.state.reImportCheckbox;
+    checkbox.checked = !checkbox.checked;
 
     this.setState({
-      reImportCheckbox,
+      reImportCheckbox: checkbox,
     });
   }
 
   /**
    * @function importData
    * @desc render the checkbox url view
-   * @author Anselm Marie
-   * @param {string} inputData - input data
-   * @param {object} e - event from the submit
    * @memberOf MainHeaderContainer
+   * @param inputData - input data
    */
-  importData = (inputData, e) => {
+  importData = (inputData: string): void => {
 
     this.props.resetData_AC();
 
     const srcSplit = inputData.split(';');
     let isSuccess = false;
 
-    srcSplit.forEach((el, i) => {
+    srcSplit.forEach((el) => {
 
       const itemSplit = el.split(' ');
       const length = itemSplit.length;
@@ -133,8 +129,7 @@ class MainHeaderContainer extends React.Component {
     if (isSuccess) {
       this.setState({
         importCompleted: true,
-        inputData: null,
-        eventForm: null,
+        inputData: '',
       });
     }
 
@@ -143,13 +138,10 @@ class MainHeaderContainer extends React.Component {
   /**
    * @function checkSrcType
    * @desc get the correct src type
-   * @author Anselm Marie
    * @memberOf MainHeaderContainer
-   * @param {string} srcType - src string
-   * @param {object} props - parent information data
-   * @return {string}
+   * @param srcType - src string
    */
-  checkSrcType = (srcType) => {
+  checkSrcType = (srcType: string): string => {
 
     switch (srcType) {
       case 'default-src':
@@ -173,12 +165,11 @@ class MainHeaderContainer extends React.Component {
   /**
    * @function storeData
    * @desc store data based on type of data
-   * @author Anselm Marie
    * @memberOf MainHeaderContainer
-   * @param {string} currentSrc - current '-src'
-   * @param {string} el - element from the csp src
+   * @param currentSrc - current '-src'
+   * @param el - element from the csp src
    */
-  storeData = (currentSrc, el) => {
+  storeData = (currentSrc: string, el: string): void => {
 
     if (el.includes('http')) {
       this.props.addUrl_AC(currentSrc, {
@@ -201,12 +192,10 @@ class MainHeaderContainer extends React.Component {
   /**
    * @function getIndex
    * @desc get the correct index for the current data
-   * @author Anselm Marie
    * @memberOf MainHeaderContainer
-   * @param {string} el - element from the csp src
-   * @return {number}
+   * @param el - element from the csp src
    */
-  getIndex = (el) => {
+  getIndex = (el: string): number|void => {
 
     const length = generalDataEnum.length;
 
@@ -221,7 +210,6 @@ class MainHeaderContainer extends React.Component {
   /**
    * @function render
    * @desc renders the component view
-   * @memberOf MainHeaderContainer
    * @memberOf MainHeaderContainer
   */
   render() {

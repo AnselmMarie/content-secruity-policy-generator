@@ -3,15 +3,15 @@ import React from 'react';
 /* Component */
 import HeadingComponent from '../heading.component';
 import CheckboxComponent from '../checkbox.component';
+/* Component Content */
+import { IProps } from './general.settings.type';
 
 /**
  * @function General Settings
  * @desc rendering the view for the general settings component
- * @author Anselm Marie
- * @param {object} props - global property data
- * @return {JSX.Element}
+ * @param props - global property data
  */
-export default (props) => {
+export default (props: IProps): JSX.Element => {
   return (
     <>
 
@@ -21,7 +21,8 @@ export default (props) => {
 
       {props.generalData &&
         <ul>
-          {props.generalData.map((el, i) => {
+          {props.generalData.map((el: any, i: number): JSX.Element => {
+            console.log('el', el);
             const checkboxData = {index: i, name: el.name};
             return (
               <li key={i}>
