@@ -1,0 +1,16 @@
+export type ICspNameConstants = {
+  WILDCARD: string,
+  WILDCARD_VAL: string,
+  NONE: string,
+  NONE_VAL: string,
+  SELF: string,
+  SELF_VAL: string,
+  DATA: string,
+  DATA_VAL: string,
+  UNSAFE_INLINE: string,
+  UNSAFE_INLINE_VAL: string,
+  UNSAFE_HASHES: string,
+  UNSAFE_HASHES_VAL: string,
+  UNSAFE_EVAL: string,
+  UNSAFE_EVAL_VAL: string,
+}

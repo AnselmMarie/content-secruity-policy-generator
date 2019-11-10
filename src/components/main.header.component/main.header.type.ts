@@ -1,12 +1,10 @@
+/* Node Module */
 import { RouteComponentProps } from 'react-router-dom';
+/* Store */
+import { IFtn_AC } from '../../store/csp/csp.type';
 
-export interface IMainHeaderProps extends RouteComponentProps {
-  addEmptyUrl_AC: (type: string, urlData: any) => void,
-  deleteUrl_AC: (type: string, urlData: any) => void,
-  modifyUrl_AC: (type: string, urlData: any) => void,
-  addUrl_AC: (type: string, urlData: any) => void,
-  modifyCheckbox_AC: (type: string, data: any) => void,
-  resetData_AC: () => void,
+export interface IMainHeaderProps extends RouteComponentProps, Partial<IFtn_AC> {
+  cspData: object,
 }
 
 export type IMainHeaderState = {

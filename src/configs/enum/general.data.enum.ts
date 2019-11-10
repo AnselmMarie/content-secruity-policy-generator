@@ -1,5 +1,5 @@
 /* Config */
-import cspConst from './constants/csp.name.constants';
+import cspConst from '../constants/csp.name.constants';
 
 /**
  * @property generalDataEnum

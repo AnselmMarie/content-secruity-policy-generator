@@ -8,7 +8,7 @@ export type IElData = {
   name: string,
   val: string,
   checked: boolean,
-  array: string[],
+  // array: string[],
 }
 
 type ICheckbox = {

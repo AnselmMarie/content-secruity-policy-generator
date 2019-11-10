@@ -82,7 +82,7 @@ export default (props: IProps): JSX.Element => {
     <>
 
       <div className="column-custom">
-        <input type="input" id={props.inputName} className="form-control" aria-checked={props.checked} name={props.inputName} value={props.el} onChange={(e) => sendDispatchModify(e, props)} />
+        <input type="input" id={props.inputName} className="form-control" aria-checked={props.checked} name={props.inputName} onChange={(e) => sendDispatchModify(e, props)} />
         <span role="button" className="delete-button" onClick={() => sendDispatchDelete(props)}>x</span>
       </div>
       {columnCheck(props.i, props.customData) && <hr />}

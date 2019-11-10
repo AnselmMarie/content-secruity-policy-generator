@@ -13,9 +13,12 @@ import {
   FONT_SRC,
 } from '../../store/csp/csp.constants';
 /* Config */
-import generalDataEnum from '../../configs/general.data.enum';
+import generalDataEnum from '../../configs/enum/general.data.enum';
+import { IGeneralDataType } from '../../configs/enum/general.data.type';
 /* Component Content */
 import { IMainHeaderProps, IMainHeaderState } from './main.header.type';
+
+const generalDataEnumData: IGeneralDataType[] = generalDataEnum;
 
 class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderState> {
 
@@ -197,10 +200,10 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
    */
   getIndex = (el: string): number|void => {
 
-    const length = generalDataEnum.length;
+    const length = generalDataEnumData.length;
 
     for (let loop = 0; loop < length; loop++) {
-      if (el === generalDataEnum[loop].val) {
+      if (el === generalDataEnumData[loop].val) {
         return loop;
       }
     }

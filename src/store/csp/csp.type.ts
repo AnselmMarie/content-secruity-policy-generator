@@ -59,48 +59,57 @@ export interface IUrlData_AC {
 }
 
 export interface ICheckboxData_AC {
-  index: number;
+  index: number | void;
   name: string;
 }
 
-export interface UpdateCheckbox_AC {
+export interface IUpdateCheckbox_AC {
   type: typeof DEFAULT_MODIFY_CHECKBOX | typeof IMG_MODIFY_CHECKBOX |
         typeof STYLE_MODIFY_CHECKBOX | typeof SCRIPT_MODIFY_CHECKBOX |
         typeof FRAME_MODIFY_CHECKBOX | typeof FONT_MODIFY_CHECKBOX;
   data: ICheckboxData_AC;
 }
 
-export interface UpdateModifyUrl_AC {
+export interface IUpdateModifyUrl_AC {
   type: typeof DEFAULT_MODIFY_URL | typeof IMG_MODIFY_URL |
         typeof STYLE_MODIFY_URL | typeof SCRIPT_MODIFY_URL |
         typeof FRAME_MODIFY_URL | typeof FONT_MODIFY_URL;
   data: IUrlData_AC;
 }
 
-export interface UpdateEmptyUrl_AC {
+export interface IUpdateEmptyUrl_AC {
   type: typeof DEFAULT_ADD_EMPTY_URL | typeof IMG_ADD_EMPTY_URL |
         typeof STYLE_ADD_EMPTY_URL | typeof SCRIPT_ADD_EMPTY_URL |
         typeof FRAME_ADD_EMPTY_URL | typeof FONT_ADD_EMPTY_URL;
   data?: any;
 }
 
-export interface UpdateAddUrl_AC {
+export interface IUpdateAddUrl_AC {
   type: typeof DEFAULT_ADD_URL | typeof IMG_ADD_URL |
         typeof STYLE_ADD_URL | typeof SCRIPT_ADD_URL |
         typeof FRAME_ADD_URL | typeof FONT_ADD_URL;
   data: IUrlData_AC;
 }
 
-export interface UpdateDeleteUrl_AC {
+export interface IUpdateDeleteUrl_AC {
   type: typeof DEFAULT_DELETE_URL | typeof IMG_DELETE_URL |
         typeof STYLE_DELETE_URL | typeof SCRIPT_DELETE_URL |
         typeof FRAME_DELETE_URL | typeof FONT_DELETE_URL;
   data: IUrlData_AC;
 }
 
-export interface UpdateResetData_AC {
+export interface IUpdateResetData_AC {
   type: typeof RESET_DATA;
   data?: any,
 }
 
-export type CspActionTypes = UpdateCheckbox_AC | UpdateModifyUrl_AC | UpdateEmptyUrl_AC | UpdateAddUrl_AC | UpdateDeleteUrl_AC | UpdateResetData_AC;
+export interface IFtn_AC {
+  addEmptyUrl_AC: (type: string) => void,
+  deleteUrl_AC: (type: string, data: IUrlData_AC) => void,
+  modifyUrl_AC: (type: string, data: IUrlData_AC) => void,
+  addUrl_AC: (type: string, data: IUrlData_AC) => void,
+  modifyCheckbox_AC: (type: string, data: ICheckboxData_AC) => void,
+  resetData_AC: () => void,
+}
+
+export type CspActionTypes = IUpdateCheckbox_AC | IUpdateModifyUrl_AC | IUpdateEmptyUrl_AC | IUpdateAddUrl_AC | IUpdateDeleteUrl_AC | IUpdateResetData_AC;
