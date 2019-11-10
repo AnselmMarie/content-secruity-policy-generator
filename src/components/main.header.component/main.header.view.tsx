@@ -7,10 +7,8 @@ import CheckboxComponent from '../checkbox.component';
 /**
  * @function Main Header View
  * @desc render the checkbox url view
- * @author Anselm Marie
- * @param {object} $this - class content
- * @return {JSX.Element}
- *///React.Component<IMainHeaderProps, any, any>
+ * @param $this - class content
+ */
 export default ($this: any): JSX.Element => {
   return (
     <>

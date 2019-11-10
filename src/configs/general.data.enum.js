@@ -4,7 +4,6 @@ import cspConst from './constants/csp.name.constants';
 /**
  * @property generalDataEnum
  * @desc Init font data
- * @author Anselm Marie
  */
 const generalDataEnum = [
   {
