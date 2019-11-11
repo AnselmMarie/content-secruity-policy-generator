@@ -8,6 +8,8 @@ import GeneralSettingsComponent from '../../components/general.settings.componen
 import CustomUrlComponent from '../../components/custom.urls.component';
 /* Component Content */
 import { IScriptRouteProps } from './script.type';
+/* Config */
+import { SCRIPT_ROUTE } from '../../configs/constants/content.constants';
 
 /**
  * @function Script View
@@ -19,7 +21,7 @@ export default (props: IScriptRouteProps): JSX.Element => {
     <>
 
       <HeadingComponent heading='h2'>
-        Script Source Content
+        {SCRIPT_ROUTE.TITLE}
       </HeadingComponent>
 
       <GeneralSettingsComponent

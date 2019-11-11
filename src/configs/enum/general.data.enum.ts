@@ -1,5 +1,5 @@
 /* Config */
-import cspConst from '../constants/csp.name.constants';
+import { CSP_CONTENT } from '../../configs/constants/content.constants';
 
 /**
  * @property generalDataEnum
@@ -7,32 +7,32 @@ import cspConst from '../constants/csp.name.constants';
  */
 const generalDataEnum = [
   {
-    name: cspConst.NONE,
-    val: cspConst.NONE_VAL,
+    name: CSP_CONTENT.NONE,
+    val: CSP_CONTENT.NONE_VAL,
   },
   {
-    name: cspConst.SELF,
-    val: cspConst.SELF_VAL,
+    name: CSP_CONTENT.SELF,
+    val: CSP_CONTENT.SELF_VAL,
   },
   {
-    name: cspConst.WILDCARD,
-    val: cspConst.WILDCARD_VAL,
+    name: CSP_CONTENT.WILDCARD,
+    val: CSP_CONTENT.WILDCARD_VAL,
   },
   {
-    name: cspConst.DATA,
-    val: cspConst.DATA_VAL,
+    name: CSP_CONTENT.DATA,
+    val: CSP_CONTENT.DATA_VAL,
   },
   {
-    name: cspConst.UNSAFE_EVAL,
-    val: cspConst.UNSAFE_EVAL_VAL,
+    name: CSP_CONTENT.UNSAFE_EVAL,
+    val: CSP_CONTENT.UNSAFE_EVAL_VAL,
   },
   {
-    name: cspConst.UNSAFE_HASHES,
-    val: cspConst.UNSAFE_HASHES_VAL,
+    name: CSP_CONTENT.UNSAFE_HASHES,
+    val: CSP_CONTENT.UNSAFE_HASHES_VAL,
   },
   {
-    name: cspConst.UNSAFE_INLINE,
-    val: cspConst.UNSAFE_INLINE_VAL,
+    name: CSP_CONTENT.UNSAFE_INLINE,
+    val: CSP_CONTENT.UNSAFE_INLINE_VAL,
   }
 ];
 

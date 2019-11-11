@@ -1,12 +1,5 @@
 /* Config */
-import cspConst from '../../configs/constants/csp.name.constants';
-import { ICspNameConstants } from '../../configs/constants/csp.name.type';
-
-/**
- * @property cspConstData
- * @desc csp constants content
- */
-const cspConstData: ICspNameConstants = cspConst;
+import { CSP_CONTENT } from '../../configs/constants/content.constants';
 
 /**
  * @property frameState
@@ -15,38 +8,38 @@ const cspConstData: ICspNameConstants = cspConst;
 const frameState = {
   generalData: [
     {
-      name: cspConstData.NONE,
-      val: cspConstData.NONE_VAL,
+      name: CSP_CONTENT.NONE,
+      val: CSP_CONTENT.NONE_VAL,
       checked: false,
     },
     {
-      name: cspConstData.SELF,
-      val: cspConstData.SELF_VAL,
+      name: CSP_CONTENT.SELF,
+      val: CSP_CONTENT.SELF_VAL,
       checked: false,
     },
     {
-      name: cspConstData.WILDCARD,
-      val: cspConstData.WILDCARD_VAL,
+      name: CSP_CONTENT.WILDCARD,
+      val: CSP_CONTENT.WILDCARD_VAL,
       checked: false,
     },
     {
-      name: cspConstData.DATA,
-      val: cspConstData.DATA_VAL,
+      name: CSP_CONTENT.DATA,
+      val: CSP_CONTENT.DATA_VAL,
       checked: false,
     },
     {
-      name: cspConstData.UNSAFE_EVAL,
-      val: cspConstData.UNSAFE_EVAL_VAL,
+      name: CSP_CONTENT.UNSAFE_EVAL,
+      val: CSP_CONTENT.UNSAFE_EVAL_VAL,
       checked: false,
     },
     {
-      name: cspConstData.UNSAFE_HASHES,
-      val: cspConstData.UNSAFE_HASHES_VAL,
+      name: CSP_CONTENT.UNSAFE_HASHES,
+      val: CSP_CONTENT.UNSAFE_HASHES_VAL,
       checked: false,
     },
     {
-      name: cspConstData.UNSAFE_INLINE,
-      val: cspConstData.UNSAFE_INLINE_VAL,
+      name: CSP_CONTENT.UNSAFE_INLINE,
+      val: CSP_CONTENT.UNSAFE_INLINE_VAL,
       checked: false,
     }
   ],

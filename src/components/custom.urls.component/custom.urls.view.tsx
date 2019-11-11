@@ -5,6 +5,8 @@ import HeadingComponent from '../heading.component';
 import UrlInputComponent from '../url.input.component';
 /* Component Content */
 import { ICustomUrlProps } from './custom.url.type';
+/* Config */
+import { GLOBAL_CONTENT } from '../../configs/constants/content.constants';
 
 /**
  * @function sendDispatchAdd
@@ -25,7 +27,7 @@ export default (props: ICustomUrlProps): JSX.Element => {
     <>
 
       <HeadingComponent heading="h3">
-        Custom Urls <span className="cursor-pointer" onClick={() => sendDispatchAdd(props)}>+</span>
+        {GLOBAL_CONTENT.CUSTOM_URLS} <span className="cursor-pointer" onClick={() => sendDispatchAdd(props)}>+</span>
       </HeadingComponent>
       <div>
         {props.customData && props.customData.map((el: string, i: number) => {

@@ -3,6 +3,8 @@ import React from 'react';
 /* Component */
 import HeadingComponent from '../heading.component';
 import CheckboxComponent from '../checkbox.component';
+/* Config */
+import { MAIN_HEADER } from '../../configs/constants/content.constants';
 
 /**
  * @function Main Header View
@@ -17,10 +19,10 @@ export default ($this: any): JSX.Element => {
         <div className="col-md-12">
 
           <HeadingComponent heading="h1">
-            Content Security Policy Generator
+            {MAIN_HEADER.TITLE}
           </HeadingComponent>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis arcu eget felis pharetra euismod. Sed massa felis, euismod varius leo eget, molestie iaculis velit. Cras mauris velit, rhoncus id metus eu, luctus vestibulum est. Donec convallis pharetra eleifend. Suspendisse cursus aliquet metus nec facilisis.</p>
+          <p>{MAIN_HEADER.DESCRIPTION}</p>
 
           {$this.state.errorMessage.show &&
             <div className="alert alert-danger" role="alert">
@@ -40,7 +42,7 @@ export default ($this: any): JSX.Element => {
                 data={$this.state.reImportCheckbox}
                 onClick={$this.updateCheckbox} />
             </div>}
-            <button id="cspBtn" className={`btn btn-primary ${$this.getImportStatus($this.state.importCompleted)}`} disabled={$this.state.importCompleted && !$this.state.reImportCheckbox.checked}>Import</button>
+            <button id="cspBtn" className={`btn btn-primary ${$this.getImportStatus($this.state.importCompleted)}`} disabled={$this.state.importCompleted && !$this.state.reImportCheckbox.checked}>{MAIN_HEADER.IMPORT_BTN}</button>
           </form>
 
         </div>

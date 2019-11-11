@@ -8,13 +8,15 @@ import GeneralSettingsComponent from '../../components/general.settings.componen
 import CustomUrlComponent from '../../components/custom.urls.component';
 /* Component Content */
 import { IStyleRouteProps } from './style.type';
+/* Config */
+import { STYLE_ROUTE } from '../../configs/constants/content.constants';
 
 export default (props: IStyleRouteProps) => {
   return (
     <>
 
     <HeadingComponent heading='h2'>
-      Style Source Content
+      {STYLE_ROUTE.TITLE}
     </HeadingComponent>
 
     <GeneralSettingsComponent

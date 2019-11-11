@@ -8,6 +8,8 @@ import GeneralSettingsComponent from '../../components/general.settings.componen
 import CustomUrlComponent from '../../components/custom.urls.component';
 /* Component Content */
 import { IDefaultRouteProps } from './default.type';
+/* Config */
+import { DEFAULT_ROUTE } from '../../configs/constants/content.constants';
 
 /**
  * @function General Settings
@@ -19,7 +21,7 @@ export default (props: IDefaultRouteProps): JSX.Element => {
     <>
 
       <HeadingComponent heading='h2'>
-        Default Source Content
+        {DEFAULT_ROUTE.TITLE}
       </HeadingComponent>
 
       <GeneralSettingsComponent

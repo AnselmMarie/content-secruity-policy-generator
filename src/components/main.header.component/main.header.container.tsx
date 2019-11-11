@@ -17,6 +17,8 @@ import generalDataEnum from '../../configs/enum/general.data.enum';
 import { IGeneralDataType } from '../../configs/enum/general.data.type';
 /* Component Content */
 import { IMainHeaderProps, IMainHeaderState } from './main.header.type';
+/* Config */
+import { MAIN_HEADER } from '../../configs/constants/content.constants';
 
 const generalDataEnumData: IGeneralDataType[] = generalDataEnum;
 
@@ -51,12 +53,29 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
   checkStatus = (e: React.ChangeEvent<any>): void => {
     e.preventDefault();
 
+    this.setState({
+      errorMessage: {
+        show: false,
+        message: '',
+      },
+      successMessage: {
+        show: false,
+        message: '',
+      }
+    });
+
     this.props.showLoader_AC();
     const inputData = e.target.elements.cspBreakdownTextArea.value;
 
     // If data doesn't exist display error
     if (!inputData) {
-      alert('hi');
+      console.log('MAIN_HEADER.ERROR_MESSAGE_NO_CONTENT', MAIN_HEADER.ERROR_MESSAGE_NO_CONTENT);
+      this.setState({
+        errorMessage: {
+          show: true,
+          message: MAIN_HEADER.ERROR_MESSAGE_NO_CONTENT,
+        }
+      });
       this.props.hideLoader_AC();
       return;
     }
@@ -122,7 +141,12 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
 
     // Display Error is not successfully
     if (!isSuccess) {
-      alert('no success');
+      this.setState({
+        errorMessage: {
+          show: true,
+          message: MAIN_HEADER.ERROR_MESSAGE_NO_SUCCESS,
+        }
+      });
     }
 
     // Update Store and display success message
@@ -130,6 +154,10 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
       this.setState({
         importCompleted: true,
         inputData: '',
+        successMessage: {
+          show: true,
+          message: MAIN_HEADER.SUCCESS_MESSAGE,
+        }
       });
     }
 

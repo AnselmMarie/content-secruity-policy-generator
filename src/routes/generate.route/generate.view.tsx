@@ -5,6 +5,8 @@ import HeadingComponent from '../../components/heading.component';
 import DisplaySrcComponent from './display.src.component.view';
 /* Route Content */
 import './generate.scss';
+/* Config */
+import { GENERATE_ROUTE, GLOBAL_CONTENT } from '../../configs/constants/content.constants';
 
 /**
  * @function Generate View
@@ -16,41 +18,41 @@ export default ($this: any): JSX.Element => {
     <>
 
       <HeadingComponent heading='h2'>
-        Summary
+        {GENERATE_ROUTE.TITLE}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.cspGenerate} />
 
       <HeadingComponent heading='h3'>
-        Breakdown
+        {GENERATE_ROUTE.SUB_TITLE}
       </HeadingComponent>
 
       <HeadingComponent heading='h4'>
-        DEFAULT-SRC
+        {GLOBAL_CONTENT.DEFAULT_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.defaultData} />
 
       <HeadingComponent heading='h4'>
-        IMG-SRC
+      {GLOBAL_CONTENT.IMG_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.imgData} />
 
       <HeadingComponent heading='h4'>
-        STYLE-SRC
+      {GLOBAL_CONTENT.STYLE_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.styleData} />
 
       <HeadingComponent heading='h4'>
-        SCRIPT-SRC
+      {GLOBAL_CONTENT.SCRIPT_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.scriptData} />
 
       <HeadingComponent heading='h4'>
-        FRAME-SRC
+      {GLOBAL_CONTENT.FRAME_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.frameData} />
 
       <HeadingComponent heading='h4'>
-        FONT-SRC
+      {GLOBAL_CONTENT.FONT_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.fontData} />
 

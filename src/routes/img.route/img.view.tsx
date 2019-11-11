@@ -8,6 +8,8 @@ import GeneralSettingsComponent from '../../components/general.settings.componen
 import CustomUrlComponent from '../../components/custom.urls.component';
 /* Component Content */
 import { IImgRouteProps } from './img.type';
+/* Config */
+import { IMG_ROUTE } from '../../configs/constants/content.constants';
 
 /**
  * @function Img View
@@ -19,7 +21,7 @@ export default (props: IImgRouteProps): JSX.Element => {
     <>
 
       <HeadingComponent heading='h2'>
-        Img Source Content
+        {IMG_ROUTE.TITLE}
       </HeadingComponent>
 
       <GeneralSettingsComponent

@@ -7,6 +7,8 @@ import CheckboxComponent from '../checkbox.component';
 import { IGeneralSettingsProps } from './general.settings.type';
 /* Config */
 import { TGlobalCheckbox } from '../../configs/types/global.type';
+/* Config */
+import { GLOBAL_CONTENT } from '../../configs/constants/content.constants';
 
 /**
  * @function General Settings View
@@ -18,7 +20,7 @@ export default (props: IGeneralSettingsProps): JSX.Element => {
     <>
 
       <HeadingComponent heading="h3">
-        General Settings
+        {GLOBAL_CONTENT.GENERAL_SETTINGS}
       </HeadingComponent>
 
       {props.generalData &&

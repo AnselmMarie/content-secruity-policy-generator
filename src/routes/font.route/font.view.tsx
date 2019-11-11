@@ -8,6 +8,8 @@ import GeneralSettingsComponent from '../../components/general.settings.componen
 import CustomUrlComponent from '../../components/custom.urls.component';
 /* Component Content */
 import { IFontRouteProps } from './font.type';
+/* Config */
+import { FONT_ROUTE } from '../../configs/constants/content.constants';
 
 /**
  * @function Font View
@@ -19,7 +21,7 @@ export default (props: IFontRouteProps): JSX.Element => {
     <>
 
       <HeadingComponent heading='h2'>
-        Script Source Content
+        {FONT_ROUTE.TITLE}
       </HeadingComponent>
 
       <GeneralSettingsComponent
