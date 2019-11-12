@@ -36,31 +36,6 @@ export const GLOBAL_CONTENT = {
   FONT_SRC: 'Font-Src',
 }
 
-export const DEFAULT_ROUTE = {
-  TITLE: 'Default Source Content',
-}
-
-export const IMG_ROUTE = {
-  TITLE: 'Img Source Content',
-}
-
-export const STYLE_ROUTE = {
-  TITLE: 'Style Source Content',
-}
-
-export const SCRIPT_ROUTE = {
-  TITLE: 'Script Source Content',
-}
-
-export const FRAME_ROUTE = {
-  TITLE: 'Frame Source Content',
-}
-
-export const FONT_ROUTE = {
-  TITLE: 'Font Source Content',
-}
-
 export const GENERATE_ROUTE = {
   TITLE: 'Summary',
-  SUB_TITLE: 'Breakdown',
 }

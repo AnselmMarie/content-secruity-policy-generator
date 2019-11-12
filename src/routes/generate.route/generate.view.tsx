@@ -17,41 +17,39 @@ export default ($this: any): JSX.Element => {
   return (
     <>
 
-      <HeadingComponent heading='h2'>
+      <HeadingComponent heading='h1'>
         {GENERATE_ROUTE.TITLE}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.cspGenerate} />
 
-      <HeadingComponent heading='h3'>
-        {GENERATE_ROUTE.SUB_TITLE}
-      </HeadingComponent>
+      <hr className="generate-hr" />
 
-      <HeadingComponent heading='h4'>
+      <HeadingComponent heading='h2'>
         {GLOBAL_CONTENT.DEFAULT_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.defaultData} />
 
-      <HeadingComponent heading='h4'>
+      <HeadingComponent heading='h2'>
       {GLOBAL_CONTENT.IMG_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.imgData} />
 
-      <HeadingComponent heading='h4'>
+      <HeadingComponent heading='h2'>
       {GLOBAL_CONTENT.STYLE_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.styleData} />
 
-      <HeadingComponent heading='h4'>
+      <HeadingComponent heading='h2'>
       {GLOBAL_CONTENT.SCRIPT_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.scriptData} />
 
-      <HeadingComponent heading='h4'>
+      <HeadingComponent heading='h2'>
       {GLOBAL_CONTENT.FRAME_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.frameData} />
 
-      <HeadingComponent heading='h4'>
+      <HeadingComponent heading='h2'>
       {GLOBAL_CONTENT.FONT_SRC}
       </HeadingComponent>
       <DisplaySrcComponent data={$this.state.fontData} />

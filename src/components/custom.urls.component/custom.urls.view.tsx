@@ -26,7 +26,7 @@ export default (props: ICustomUrlProps): JSX.Element => {
   return (
     <>
 
-      <HeadingComponent heading="h3">
+      <HeadingComponent heading="h2">
         {GLOBAL_CONTENT.CUSTOM_URLS} <span className="cursor-pointer" onClick={() => sendDispatchAdd(props)}>+</span>
       </HeadingComponent>
       <div>

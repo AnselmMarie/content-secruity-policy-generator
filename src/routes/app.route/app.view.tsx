@@ -33,9 +33,7 @@ export default (): JSX.Element => {
             <NavigationComponent />
           </aside>
           <main role="main" className="main-area">
-            <header>
-              <MainHeaderComponent />
-            </header>
+            <MainHeaderComponent />
             <section className="section-area">
               <RouteComponent />
             </section>

@@ -1,6 +1,13 @@
 @import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixin.scss';
 
 header {
+
+  padding: 25px;
+  border: 1px solid $grayColor;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  @include box-shadow-gray;
 
   .main-header-description {
     font-size: 18px;
@@ -22,6 +29,8 @@ header {
       width: 120px;
       padding: 10px 5px;
       border-radius: 8px;
+      @include box-shadow-dark-green;
+      float: left;
 
       &:hover {
         background-color: $darkGreen;
@@ -31,4 +40,9 @@ header {
 
   }
 
+  .re-import-checkbox-container {
+    margin: 10px 0 0 14px;
+    float: left;
+  }
+  
 }

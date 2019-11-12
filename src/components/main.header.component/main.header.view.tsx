@@ -14,7 +14,7 @@ import './main.header.scss';
  */
 export default ($this: any): JSX.Element => {
   return (
-    <>
+    <header>
 
       <div className="row">
         <div className="col-md-12">
@@ -39,18 +39,18 @@ export default ($this: any): JSX.Element => {
 
           <form id="cspForm" onSubmit={$this.checkStatus}>
             <textarea name="cspImportTextArea" rows={5} id="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />
+            <button id="cspBtn" className={`btn btn-primary ${$this.getImportStatus($this.state.importCompleted)}`} disabled={$this.state.importCompleted && !$this.state.reImportCheckbox.checked}>{MAIN_HEADER.IMPORT_BTN}</button>
             {$this.state.importCompleted &&
-            <div>
+            <div className="re-import-checkbox-container">
               <CheckboxComponent
                 data={$this.state.reImportCheckbox}
                 onClick={$this.updateCheckbox} />
             </div>}
-            <button id="cspBtn" className={`btn btn-primary ${$this.getImportStatus($this.state.importCompleted)}`} disabled={$this.state.importCompleted && !$this.state.reImportCheckbox.checked}>{MAIN_HEADER.IMPORT_BTN}</button>
           </form>
 
         </div>
       </div>
 
-    </>
+    </header>
   );
 };

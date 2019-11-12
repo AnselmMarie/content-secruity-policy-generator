@@ -21,8 +21,8 @@ export default (props: IProps): JSX.Element =>  {
   const data = props.data;
   return (
     <label htmlFor={data.name}>
-      <input type="checkbox" id={data.name} name={data.name} data-checked={data.checked} onClick={() => props.onClick()} />
-      <div className={`checkbox ${checkClass(data.checked)}`}></div>
+      <input aria-hidden="true" type="checkbox" id={data.name} name={data.name} data-checked={data.checked} onClick={() => props.onClick()} />
+      <div className={`aria-focus checkbox ${checkClass(data.checked)}`}></div>
       {data.label || data.name}
     </label>
   )

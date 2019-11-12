@@ -19,7 +19,7 @@ export default (props: IGeneralSettingsProps): JSX.Element => {
   return (
     <>
 
-      <HeadingComponent heading="h3">
+      <HeadingComponent heading="h2">
         {GLOBAL_CONTENT.GENERAL_SETTINGS}
       </HeadingComponent>
 

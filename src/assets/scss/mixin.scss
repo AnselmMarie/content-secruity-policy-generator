@@ -1,11 +1,17 @@
 @mixin box-shadow-gray {
-  -webkit-box-shadow: $shadowPosition rgba(199, 203, 214, 0.75);
-  -moz-box-shadow: $shadowPosition rgba(199, 203, 214, 0.75);
-  box-shadow: $shadowPosition rgba(199, 203, 214, 0.75);
+  -webkit-box-shadow: $shadowPosition $grayColorAlpha;
+  -moz-box-shadow: $shadowPosition $grayColorAlpha;
+  box-shadow: $shadowPosition $grayColorAlpha;
 }
 
 @mixin box-shadow-dark-green {
-  -webkit-box-shadow: $shadowPosition rgba(32, 102, 99, 0.75);
-  -moz-box-shadow: $shadowPosition rgba(32, 102, 99, 0.75);
-  box-shadow: $shadowPosition rgba(32, 102, 99, 0.75);
+  -webkit-box-shadow: $shadowPosition $darkGreenAlpha;
+  -moz-box-shadow: $shadowPosition $darkGreenAlpha;
+  box-shadow: $shadowPosition $darkGreenAlpha;
+}
+
+@mixin box-shadow-dark-green-small {
+  -webkit-box-shadow: $shadowPositionSmall $darkGreenAlpha;
+  -moz-box-shadow: $shadowPositionSmall $darkGreenAlpha;
+  box-shadow: $shadowPositionSmall $darkGreenAlpha;
 }
