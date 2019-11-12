@@ -5,6 +5,7 @@ import HeadingComponent from '../heading.component';
 import CheckboxComponent from '../checkbox.component';
 /* Config */
 import { MAIN_HEADER } from '../../configs/constants/content.constants';
+import './main.header.scss';
 
 /**
  * @function Main Header View
@@ -22,7 +23,7 @@ export default ($this: any): JSX.Element => {
             {MAIN_HEADER.TITLE}
           </HeadingComponent>
 
-          <p>{MAIN_HEADER.DESCRIPTION}</p>
+          <p className="main-header-description">{MAIN_HEADER.DESCRIPTION}</p>
 
           {$this.state.errorMessage.show &&
             <div className="alert alert-danger" role="alert">
@@ -33,6 +34,8 @@ export default ($this: any): JSX.Element => {
             <div className="alert alert-success" role="alert">
               {$this.state.successMessage.message}
             </div>}
+
+          <hr />
 
           <form id="cspForm" onSubmit={$this.checkStatus}>
             <textarea name="cspImportTextArea" rows={5} id="cspBreakdownTextArea" className="csp-breakdown-text-area form-control" placeholder="Enter CSP content" aria-label="Enter Content Security Policy content" />

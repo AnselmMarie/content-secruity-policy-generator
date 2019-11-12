@@ -17,7 +17,7 @@ export const CSP_CONTENT = {
 
 export const MAIN_HEADER = {
   TITLE: 'Content Security Policy Generator',
-  DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis arcu eget felis pharetra euismod. Sed massa felis, euismod varius leo eget, molestie iaculis velit. Cras mauris velit, rhoncus id metus eu, luctus vestibulum est. Donec convallis pharetra eleifend. Suspendisse cursus aliquet metus nec facilisis.',
+  DESCRIPTION: 'Generate your Content Security Policy header with this online generator.',
   IMPORT_BTN: 'Import',
   ERROR_MESSAGE_NO_CONTENT: 'Error No Content',
   ERROR_MESSAGE_NO_SUCCESS: 'Error No Success',

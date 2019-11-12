@@ -1,0 +1,29 @@
+@import '../../assets/scss/variables.scss';
+
+.side-area {
+
+  a {
+    font-size: 22px;
+    color: $normalPurple;
+
+    &:hover {
+      color: $medPurple;
+    }
+
+    &.active {
+      color: $lightPurple;
+    }
+
+  }
+
+  ul {
+
+    li {
+      text-align: right;
+      margin-right: 70px;
+      margin-bottom: 20px;
+    }
+
+  }
+
+}

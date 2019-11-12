@@ -17,14 +17,14 @@ ul {
   top: 5px;
   left: 0;
   border-radius: 10px;
-  border: 1px solid red;
+  border: 1px solid $darkGreen;
 
   &.not-checked {
-    background-color:white;
+    background-color: $lightGreen;
   }
 
   &.is-checked {
-    background-color: green;
+    background-color: $normalGreen;
   }
 
 }

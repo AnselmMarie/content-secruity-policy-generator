@@ -7,6 +7,7 @@ import {
   TNavigationProps,
   TNavLinks,
 } from './navigation.type';
+import './navigation.style.scss';
 
 /**
  * @property NavLinksData
@@ -25,7 +26,7 @@ export default (props: TNavigationProps): JSX.Element => {
     <nav>
       <ul>
         {NavLinksData.map((el, i: number) => {
-          return <li key={i}><NavLink onClick={() => props.currentPage_AC(el)} to={el.path}>{el.name}</NavLink></li>;
+          return <li key={i}><NavLink exact onClick={() => props.currentPage_AC(el)} to={el.path}>{el.name}</NavLink></li>;
         })}
       </ul>
     </nav>

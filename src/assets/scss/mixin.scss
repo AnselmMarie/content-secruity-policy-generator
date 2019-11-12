@@ -1,0 +1,11 @@
+@mixin box-shadow-gray {
+  -webkit-box-shadow: $shadowPosition rgba(199, 203, 214, 0.75);
+  -moz-box-shadow: $shadowPosition rgba(199, 203, 214, 0.75);
+  box-shadow: $shadowPosition rgba(199, 203, 214, 0.75);
+}
+
+@mixin box-shadow-dark-green {
+  -webkit-box-shadow: $shadowPosition rgba(32, 102, 99, 0.75);
+  -moz-box-shadow: $shadowPosition rgba(32, 102, 99, 0.75);
+  box-shadow: $shadowPosition rgba(32, 102, 99, 0.75);
+}
