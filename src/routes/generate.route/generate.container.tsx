@@ -27,6 +27,7 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
     imgData: '',
     scriptData: '',
     styleData: '',
+    objectData: '',
   }
 
   componentDidMount() {
@@ -110,6 +111,13 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
         return {
           data: this.tempCSP.fontData,
           name: 'fontData',
+        }
+
+      case 'objectGeneral':
+      case 'objectCustom':
+        return {
+          data: this.tempCSP.objectData,
+          name: 'objectData',
         }
 
       default:
@@ -208,17 +216,23 @@ class GenerateContainer extends React.Component<IGenerateProps, TGenerateState> 
       {
         data: this.tempCSP.fontData,
         name: 'font-src',
+      },
+      {
+        data: this.tempCSP.objectData,
+        name: 'object-src',
       }
     ];
 
-    dataLoop.forEach((el) => {
+    dataLoop.forEach((el, i) => {
 
       const currentData = `${el.name} ${el.data}`;
 
-      if (el.name === 'default-src') {
-        cspString = `${currentData}`;
-      } else {
-        cspString = `${cspString} ${currentData}`;
+      if (el.data !== null) {
+        if (cspString === '') {
+          cspString = `${currentData}`;
+        } else {
+          cspString = `${cspString}; ${currentData}`;
+        }
       }
 
     });

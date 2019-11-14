@@ -2,6 +2,7 @@
 import React from 'react';
 /* Component Content */
 import { IUrlInputProps } from './url.input.type';
+import './url.input.scss';
 
 /**
  * @property theNextSplit
@@ -81,8 +82,8 @@ export default (props: IUrlInputProps): JSX.Element => {
   return (
     <>
 
-      <div className="column-custom">
-        <input type="input" id={props.inputName} className="form-control" name={props.inputName} value={props.el} onChange={(e) => sendDispatchModify(e, props)} />
+      <div className="column-custom col-md-12 col-lg-6">
+        <input type="input" id={props.inputName} className="form-control" name={props.inputName} value={props.el || ''} onChange={(e) => sendDispatchModify(e, props)} />
         <span role="button" className="delete-button" onClick={() => sendDispatchDelete(props)}>x</span>
       </div>
       {columnCheck(props.i, props.customData) && <hr />}

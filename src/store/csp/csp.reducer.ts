@@ -40,6 +40,11 @@ import {
   FONT_ADD_EMPTY_URL,
   FONT_ADD_URL,
   FONT_DELETE_URL,
+  OBJECT_MODIFY_CHECKBOX,
+  OBJECT_MODIFY_URL,
+  OBJECT_ADD_EMPTY_URL,
+  OBJECT_ADD_URL,
+  OBJECT_DELETE_URL,
   RESET_DATA,
 } from './csp.constants';
 import {
@@ -209,6 +214,30 @@ export default (state = initState, action: CspActionTypes): ICspState => {
     case (FONT_DELETE_URL):
       const font5 = deleteUrl(state, data, 'fontCustom');
       return { ...state, fontCustom: font5.clonedData };
+  }
+
+  /**** OBJECT-SRC ***/
+  switch (action.type) {
+    case (OBJECT_MODIFY_CHECKBOX):
+      const font1 = updateChecked(state, data, 'objectGeneral');
+      return { ...state, objectGeneral: font1.clonedData };
+
+    case (OBJECT_MODIFY_URL):
+      const font2 = updateUrl(state, data, 'objectCustom');
+      return { ...state, objectCustom: font2.clonedData };
+
+    case (OBJECT_ADD_EMPTY_URL):
+      const font3 = addUrl(state, null, 'objectCustom');
+      return { ...state, objectCustom: font3 };
+
+    case (OBJECT_ADD_URL):
+      const url = data && data.url;
+      const font4 = addUrl(state, url, 'objectCustom');
+      return { ...state, objectCustom: font4 };
+
+    case (OBJECT_DELETE_URL):
+      const font5 = deleteUrl(state, data, 'objectCustom');
+      return { ...state, objectCustom: font5.clonedData };
   }
 
   /**** OTHER ***/

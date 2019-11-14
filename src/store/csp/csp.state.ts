@@ -5,6 +5,7 @@ import styleState from './csp.state.style';
 import scriptState from './csp.state.script';
 import frameState from './csp.state.frame';
 import fontState from './csp.state.font';
+import objectState from './csp.state.object';
 
 /**
  * @property initState
@@ -23,6 +24,8 @@ const initState = {
   frameCustom: frameState.customData,
   fontGeneral: fontState.generalData,
   fontCustom: fontState.customData,
+  objectGeneral: objectState.generalData,
+  objectCustom: objectState.customData,
 }
 
 export default initState;

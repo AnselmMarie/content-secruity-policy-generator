@@ -7,11 +7,11 @@ import { GLOBAL_CONTENT } from '../../configs/constants/content.constants';
 
 export default (props: TDisplaySrcProps): JSX.Element => {
   return (
-    <>
+    <div className="single-src">
 
-      {props.data && <div>"{props.data}"</div>}
-      {!props.data && <div>{GLOBAL_CONTENT.NA}</div>}
+      {props.data && props.data}
+      {!props.data && GLOBAL_CONTENT.NA}
 
-    </>
+    </div>
   )
 }

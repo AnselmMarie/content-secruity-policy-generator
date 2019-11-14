@@ -1,8 +1,11 @@
+/* Config */
+import { MAIN_HEADER } from '../../configs/constants/content.constants';
+
 export const mainHeaderState = {
   importCompleted: false,
   inputData: '',
   reImportCheckbox: {
-    label: 'You will lose any current information. Click "Import" if this is ok otherwise click "Cancel".',
+    label: MAIN_HEADER.IMPORT_NOTE,
     checked: false,
     name: 'reImportCheckbox'
   }

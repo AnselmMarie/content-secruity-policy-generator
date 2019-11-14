@@ -4,6 +4,12 @@
   box-shadow: $shadowPosition $grayColorAlpha;
 }
 
+@mixin box-shadow-gray-small {
+  -webkit-box-shadow: $shadowPositionSmall $grayColorAlpha;
+  -moz-box-shadow: $shadowPositionSmall $grayColorAlpha;
+  box-shadow: $shadowPositionSmall $grayColorAlpha;
+}
+
 @mixin box-shadow-dark-green {
   -webkit-box-shadow: $shadowPosition $darkGreenAlpha;
   -moz-box-shadow: $shadowPosition $darkGreenAlpha;

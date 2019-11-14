@@ -8,6 +8,7 @@ import StyleRoute from '../../routes/style.route';
 import ScriptRoute from '../../routes/script.route';
 import FrameRoute from '../../routes/frame.route';
 import FontRoute from '../../routes/font.route';
+import ObjectRoute from '../../routes/object.route';
 import GenerateRoute from '../../routes/generate.route';
 import ErrRoute from '../../routes/err.route';
 
@@ -24,6 +25,7 @@ export default (): JSX.Element => {
       <Route exact path="/script-src" component={ScriptRoute} />
       <Route exact path="/frame-src" component={FrameRoute} />
       <Route exact path="/font-src" component={FontRoute} />
+      <Route exact path="/object-src" component={ObjectRoute} />
       <Route exact path="/generate" component={GenerateRoute} />
       <Route component={ErrRoute} />
   </Switch>

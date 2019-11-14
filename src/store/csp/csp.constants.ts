@@ -46,5 +46,13 @@ export const FONT_ADD_EMPTY_URL = `${FONT_SRC}_add_empty_url`;
 export const FONT_ADD_URL = `${FONT_SRC}_add_url`;
 export const FONT_DELETE_URL = `${FONT_SRC}_delete_url`;
 
+/* OBJECT-SRC */
+export const OBJECT_SRC = 'object';
+export const OBJECT_MODIFY_CHECKBOX = `${OBJECT_SRC}_modify_checkbox`;
+export const OBJECT_MODIFY_URL = `${OBJECT_SRC}_modify_url`;
+export const OBJECT_ADD_EMPTY_URL = `${OBJECT_SRC}_add_empty_url`;
+export const OBJECT_ADD_URL = `${OBJECT_SRC}_add_url`;
+export const OBJECT_DELETE_URL = `${OBJECT_SRC}_delete_url`;
+
 /* OTHER */
 export const RESET_DATA = 'reset_data';

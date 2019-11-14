@@ -2,7 +2,6 @@
 @import '../../assets/scss/mixin.scss';
 
 header {
-
   padding: 25px;
   border: 1px solid $grayColor;
   border-radius: 8px;
@@ -30,9 +29,26 @@ header {
       padding: 10px 5px;
       border-radius: 8px;
       @include box-shadow-dark-green;
-      float: left;
+      display: inline-block;
+      max-height: 50px;
+      vertical-align: middle;
 
-      &:hover {
+      &.disabled,
+      &:disabled,
+      &:disabled:hover,
+      &:disabled:active {
+        background-color: $normalGreen;
+        border: 1px solid $darkGreen;
+        opacity: .8;
+      }
+
+      &:not(:disabled):not(.disabled):active {
+        background-color: $darkGreen;
+        border: 1px solid $darkGreen;
+      }
+
+      &:hover,
+      &:active {
         background-color: $darkGreen;
       }
 
@@ -40,9 +56,17 @@ header {
 
   }
 
-  .re-import-checkbox-container {
-    margin: 10px 0 0 14px;
-    float: left;
+  .import-row {
+    margin: 0;
+
+    label {
+      margin: 0;
+    }
   }
-  
+
+  .re-import-checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+
 }

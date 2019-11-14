@@ -11,6 +11,7 @@ import {
   SCRIPT_SRC,
   FRAME_SRC,
   FONT_SRC,
+  OBJECT_SRC,
 } from '../../store/csp/csp.constants';
 /* Config */
 import generalDataEnum from '../../configs/enum/general.data.enum';
@@ -186,6 +187,8 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
         return FRAME_SRC;
       case 'font-src':
         return FONT_SRC;
+      case 'object-src':
+        return OBJECT_SRC;
       default:
         return null;
     }

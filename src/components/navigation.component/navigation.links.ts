@@ -24,6 +24,10 @@ export default [
     path: '/font-src'
   },
   {
+    name: 'object-src',
+    path: '/object-src'
+  },
+  {
     name: 'generate',
     path: '/generate'
   }

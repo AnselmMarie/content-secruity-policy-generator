@@ -29,6 +29,11 @@ import {
   FONT_ADD_EMPTY_URL,
   FONT_ADD_URL,
   FONT_DELETE_URL,
+  OBJECT_MODIFY_CHECKBOX,
+  OBJECT_MODIFY_URL,
+  OBJECT_ADD_EMPTY_URL,
+  OBJECT_ADD_URL,
+  OBJECT_DELETE_URL,
   RESET_DATA,
 } from './csp.constants';
 
@@ -45,6 +50,8 @@ export interface ICspState {
   frameCustom: string[];
   fontGeneral: generalData[];
   fontCustom: string[];
+  objectGeneral: generalData[];
+  objectCustom: string[];
 }
 
 interface generalData {
@@ -66,35 +73,35 @@ export interface ICheckboxData_AC {
 export interface IUpdateCheckbox_AC {
   type: typeof DEFAULT_MODIFY_CHECKBOX | typeof IMG_MODIFY_CHECKBOX |
         typeof STYLE_MODIFY_CHECKBOX | typeof SCRIPT_MODIFY_CHECKBOX |
-        typeof FRAME_MODIFY_CHECKBOX | typeof FONT_MODIFY_CHECKBOX;
+        typeof FRAME_MODIFY_CHECKBOX | typeof FONT_MODIFY_CHECKBOX | typeof OBJECT_MODIFY_CHECKBOX;
   data: ICheckboxData_AC;
 }
 
 export interface IUpdateModifyUrl_AC {
   type: typeof DEFAULT_MODIFY_URL | typeof IMG_MODIFY_URL |
         typeof STYLE_MODIFY_URL | typeof SCRIPT_MODIFY_URL |
-        typeof FRAME_MODIFY_URL | typeof FONT_MODIFY_URL;
+        typeof FRAME_MODIFY_URL | typeof FONT_MODIFY_URL | typeof OBJECT_MODIFY_URL;
   data: IUrlData_AC;
 }
 
 export interface IUpdateEmptyUrl_AC {
   type: typeof DEFAULT_ADD_EMPTY_URL | typeof IMG_ADD_EMPTY_URL |
         typeof STYLE_ADD_EMPTY_URL | typeof SCRIPT_ADD_EMPTY_URL |
-        typeof FRAME_ADD_EMPTY_URL | typeof FONT_ADD_EMPTY_URL;
+        typeof FRAME_ADD_EMPTY_URL | typeof FONT_ADD_EMPTY_URL | typeof OBJECT_ADD_EMPTY_URL;
   data?: any;
 }
 
 export interface IUpdateAddUrl_AC {
   type: typeof DEFAULT_ADD_URL | typeof IMG_ADD_URL |
         typeof STYLE_ADD_URL | typeof SCRIPT_ADD_URL |
-        typeof FRAME_ADD_URL | typeof FONT_ADD_URL;
+        typeof FRAME_ADD_URL | typeof FONT_ADD_URL| typeof OBJECT_ADD_URL;
   data: IUrlData_AC;
 }
 
 export interface IUpdateDeleteUrl_AC {
   type: typeof DEFAULT_DELETE_URL | typeof IMG_DELETE_URL |
         typeof STYLE_DELETE_URL | typeof SCRIPT_DELETE_URL |
-        typeof FRAME_DELETE_URL | typeof FONT_DELETE_URL;
+        typeof FRAME_DELETE_URL | typeof FONT_DELETE_URL | typeof OBJECT_DELETE_URL;
   data: IUrlData_AC;
 }
 

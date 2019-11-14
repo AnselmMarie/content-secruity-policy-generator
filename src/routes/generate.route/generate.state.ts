@@ -6,4 +6,5 @@ export const generateState = {
   scriptData: '',
   frameData: '',
   fontData: '',
+  objectData: '',
 }

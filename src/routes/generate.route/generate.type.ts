@@ -25,6 +25,7 @@ export type TGenerateState = {
   scriptData: string,
   frameData: string,
   fontData: string,
+  objectData: string,
 }
 
 export type TSrcData = {
