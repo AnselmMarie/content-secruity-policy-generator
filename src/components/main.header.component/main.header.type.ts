@@ -6,29 +6,35 @@ import {
 import {
   ILoaderFtn_AC,
 } from '../../store/loader/loader.type';
+import { TGlobalCheckbox } from '../../configs/types/global.type';
 
 export interface IMainHeaderProps extends Partial<ICspFtn_AC>, Partial<ILoaderFtn_AC> {
-  cspData: ICspState,
+  cspData: ICspState;
 }
 
 export type IMainHeaderState = {
-  importCompleted: boolean,
-  inputData: string,
+  importCompleted: boolean;
+  inputData: string;
   reImportCheckbox: {
-    label: string,
-    checked: boolean,
-    name: string
+    label: string;
+    checked: boolean;
+    name: string;
   },
   errorMessage: {
-    show: boolean,
-    message: string,
+    show: boolean;
+    message: string;
   },
   successMessage: {
-    show: boolean,
-    message: string,
+    show: boolean;
+    message: string;
   },
 }
 
 export type TReduxState = {
-  cspData: ICspState,
+  cspData: ICspState;
+}
+
+export type TCurrentSrc = {
+  src: string;
+  data: TGlobalCheckbox[];
 }

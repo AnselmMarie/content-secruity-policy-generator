@@ -28,11 +28,6 @@ const styleState = {
       checked: false,
     },
     {
-      name: CSP_CONTENT.UNSAFE_EVAL,
-      val: CSP_CONTENT.UNSAFE_EVAL_VAL,
-      checked: false,
-    },
-    {
       name: CSP_CONTENT.UNSAFE_HASHES,
       val: CSP_CONTENT.UNSAFE_HASHES_VAL,
       checked: false,

@@ -23,6 +23,8 @@ export default (props: IGeneralSettingsProps): JSX.Element => {
         {GLOBAL_CONTENT.GENERAL_SETTINGS}
       </HeadingComponent>
 
+      <p>{GLOBAL_CONTENT.GENERAL_DESCRIPTION}</p>
+
       {props.generalData &&
         <ul>
           {props.generalData.map((el: TGlobalCheckbox, i: number): JSX.Element => {

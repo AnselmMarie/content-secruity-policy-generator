@@ -19,14 +19,14 @@ export default (props: IFontRouteProps): JSX.Element => {
 
       <div className="row">
 
-        <div className="col-lg-12 col-xl-3">
+        <div className="setting-col col-lg-12 col-xl-3">
           <GeneralSettingsComponent
             type={FONT_SRC}
             modifyCheckbox_AC={props.modifyCheckbox_AC}
             generalData={props.fontGeneral} />
         </div>
 
-        <div className="col-lg-12 col-xl-9">
+        <div className="setting-col col-lg-12 col-xl-9">
           <CustomUrlComponent
             type={FONT_SRC}
             addEmptyUrl_AC={props.addEmptyUrl_AC}

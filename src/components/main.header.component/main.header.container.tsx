@@ -13,14 +13,14 @@ import {
   FONT_SRC,
   OBJECT_SRC,
 } from '../../store/csp/csp.constants';
-/* Config */
-import generalDataEnum from '../../configs/enum/general.data.enum';
-import { IGeneralDataType } from '../../configs/enum/general.data.type';
 /* Component Content */
-import { IMainHeaderProps, IMainHeaderState } from './main.header.type';
+import { IMainHeaderProps, IMainHeaderState, TCurrentSrc } from './main.header.type';
 /* Config */
 import { MAIN_HEADER } from '../../configs/constants/content.constants';
+import { TGlobalCheckbox } from '../../configs/types/global.type';
 
+import generalDataEnum from '../../configs/enum/general.data.enum';
+import { IGeneralDataType } from '../../configs/enum/general.data.type';
 const generalDataEnumData: IGeneralDataType[] = generalDataEnum;
 
 class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderState> {
@@ -172,23 +172,45 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
    * @memberOf MainHeaderContainer
    * @param srcType - src string
    */
-  checkSrcType = (srcType: string): string => {
+  checkSrcType = (srcType: string): TCurrentSrc => {
+    const cspData = this.props.cspData;
 
     switch (srcType) {
       case 'default-src':
-        return DEFAULT_SRC;
+        return {
+          src: DEFAULT_SRC,
+          data: cspData.defaultGeneral,
+        };
       case 'img-src':
-        return IMG_SRC;
+        return {
+          src: IMG_SRC,
+          data: cspData.imgGeneral,
+        };
       case 'style-src':
-        return STYLE_SRC;
+        return {
+          src: STYLE_SRC,
+          data: cspData.styleGeneral,
+        };
       case 'script-src':
-        return SCRIPT_SRC;
+        return {
+          src: SCRIPT_SRC,
+          data: cspData.scriptGeneral,
+        };
       case 'frame-src':
-        return FRAME_SRC;
+        return {
+          src: FRAME_SRC,
+          data: cspData.frameGeneral,
+        };
       case 'font-src':
-        return FONT_SRC;
+        return {
+          src: FONT_SRC,
+          data: cspData.fontGeneral,
+        };
       case 'object-src':
-        return OBJECT_SRC;
+        return {
+          src: OBJECT_SRC,
+          data: cspData.objectGeneral,
+        };
       default:
         return null;
     }
@@ -202,10 +224,10 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
    * @param currentSrc - current '-src'
    * @param el - element from the csp src
    */
-  storeData = (currentSrc: string, el: string): void => {
+  storeData = (currentSrc: TCurrentSrc, el: string): void => {
 
     if (el.includes('http')) {
-      this.props.addUrl_AC(currentSrc, {
+      this.props.addUrl_AC(currentSrc.src, {
         url: el,
       });
 
@@ -214,8 +236,8 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
             .replace(new RegExp('"', 'g'), '')
             .replace(new RegExp("'", 'g'), '');
 
-      this.props.modifyCheckbox_AC(currentSrc, {
-        index: this.getIndex(el),
+      this.props.modifyCheckbox_AC(currentSrc.src, {
+        index: this.getIndex(el, currentSrc.data),
         name: el,
       });
     }
@@ -227,16 +249,27 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
    * @desc get the correct index for the current data
    * @memberOf MainHeaderContainer
    * @param el - element from the csp src
+   * @param curSrcData - current src data
    */
-  getIndex = (el: string): number|void => {
+  getIndex = (el: string, curSrcData: TGlobalCheckbox[]): number|void => {
 
     const length = generalDataEnumData.length;
 
     for (let loop = 0; loop < length; loop++) {
       if (el === generalDataEnumData[loop].val) {
-        return loop;
+        if (el === curSrcData[loop].val) {
+          return loop;
+        }
       }
     }
+
+    // const length = curSrcData.length;
+
+    // for (let loop = 0; loop < length; loop++) {
+    //   if (el === curSrcData[loop].val) {
+    //     return loop;
+    //   }
+    // }
 
   };
 

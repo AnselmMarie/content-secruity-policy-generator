@@ -19,14 +19,14 @@ export default (props: IFrameRouteProps): JSX.Element => {
 
       <div className="row">
 
-        <div className="col-lg-12 col-xl-3">
+        <div className="setting-col col-lg-12 col-xl-3">
           <GeneralSettingsComponent
             type={FRAME_SRC}
             modifyCheckbox_AC={props.modifyCheckbox_AC}
             generalData={props.frameGeneral} />
         </div>
 
-        <div className="col-lg-12 col-xl-9">
+        <div className="setting-col col-lg-12 col-xl-9">
           <CustomUrlComponent
             type={FRAME_SRC}
             addEmptyUrl_AC={props.addEmptyUrl_AC}

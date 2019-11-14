@@ -26,21 +26,6 @@ const fontState = {
       name: CSP_CONTENT.DATA,
       val: CSP_CONTENT.DATA_VAL,
       checked: false,
-    },
-    {
-      name: CSP_CONTENT.UNSAFE_EVAL,
-      val: CSP_CONTENT.UNSAFE_EVAL_VAL,
-      checked: false,
-    },
-    {
-      name: CSP_CONTENT.UNSAFE_HASHES,
-      val: CSP_CONTENT.UNSAFE_HASHES_VAL,
-      checked: false,
-    },
-    {
-      name: CSP_CONTENT.UNSAFE_INLINE,
-      val: CSP_CONTENT.UNSAFE_INLINE_VAL,
-      checked: false,
     }
   ],
   customData: ['']

@@ -29,6 +29,9 @@ export default (props: ICustomUrlProps): JSX.Element => {
       <HeadingComponent heading="h2">
         {GLOBAL_CONTENT.CUSTOM_URLS} <span className="cursor-pointer" onClick={() => sendDispatchAdd(props)}>+</span>
       </HeadingComponent>
+
+      <p>{GLOBAL_CONTENT.CUSTOM_URLS_DESCRIPTION}</p>
+
       <div className="row">
         {props.customData && props.customData.map((el: string, i: number) => {
           const inputName = `name${i}`;
