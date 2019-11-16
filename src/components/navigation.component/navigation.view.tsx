@@ -24,6 +24,7 @@ export default (props: TNavigationProps): JSX.Element => {
   return (
 
     <nav>
+      <div className="active-state"></div>
       <ul>
         {NavLinksData.map((el, i: number) => {
           return <li key={i}><NavLink exact onClick={() => props.currentPage_AC(el)} to={el.path}>{el.name}</NavLink></li>;

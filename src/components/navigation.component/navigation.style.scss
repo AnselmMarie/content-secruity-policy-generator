@@ -2,28 +2,75 @@
 
 .side-area {
 
-  a {
-    font-size: 22px;
-    color: $normalPurple;
+  nav {
+    position: relative;
 
-    &:hover {
-      color: $medPurple;
+    .active-state {
+      position: absolute;
+      width: 5px;
+      height: 33px;
+      right: 2px;
+      background: white;
+      border-radius: 10px;
+      transition: transform 0.4s;
     }
 
-    &.active {
-      color: $lightPurple;
+    a {
+      font-size: 22px;
+      color: $normalPurple;
+
+      &:hover {
+        color: $medPurple;
+      }
+
+      &.active {
+        color: $lightPurple;
+      }
+
+    }
+
+    ul {
+
+      li {
+        text-align: right;
+        margin-right: 70px;
+        margin-bottom: 20px;
+      }
+
     }
 
   }
 
-  ul {
+}
 
-    li {
-      text-align: right;
-      margin-right: 70px;
-      margin-bottom: 20px;
-    }
+.app-contents {
 
+  &.img-src .active-state {
+    transform: translateY(54px);
+  }
+
+  &.style-src .active-state {
+    transform: translateY(106px);
+  }
+
+  &.script-src .active-state {
+    transform: translateY(160px);
+  }
+
+  &.frame-src .active-state {
+    transform: translateY(212px);
+  }
+
+  &.font-src .active-state {
+    transform: translateY(265px);
+  }
+
+  &.object-src .active-state {
+    transform: translateY(319px);
+  }
+
+  &.generate .active-state {
+    transform: translateY(372px);
   }
 
 }
