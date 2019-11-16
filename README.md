@@ -1,2 +1,0 @@
-# content-security-policy-generator
- 
