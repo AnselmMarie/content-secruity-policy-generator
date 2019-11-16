@@ -1,7 +1,7 @@
 export default [
   {
     name: 'default-src',
-    path: '/'
+    path: '/csp-generator'
   },
   {
     name: 'img-src',
