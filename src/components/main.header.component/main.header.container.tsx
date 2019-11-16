@@ -19,10 +19,6 @@ import { IMainHeaderProps, IMainHeaderState, TCurrentSrc } from './main.header.t
 import { MAIN_HEADER } from '../../configs/constants/content.constants';
 import { TGlobalCheckbox } from '../../configs/types/global.type';
 
-import generalDataEnum from '../../configs/enum/general.data.enum';
-import { IGeneralDataType } from '../../configs/enum/general.data.type';
-const generalDataEnumData: IGeneralDataType[] = generalDataEnum;
-
 class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderState> {
 
   /**
@@ -253,23 +249,13 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
    */
   getIndex = (el: string, curSrcData: TGlobalCheckbox[]): number|void => {
 
-    const length = generalDataEnumData.length;
+    const length = curSrcData.length;
 
     for (let loop = 0; loop < length; loop++) {
-      if (el === generalDataEnumData[loop].val) {
-        if (el === curSrcData[loop].val) {
-          return loop;
-        }
+      if (el === curSrcData[loop].val) {
+        return loop;
       }
     }
-
-    // const length = curSrcData.length;
-
-    // for (let loop = 0; loop < length; loop++) {
-    //   if (el === curSrcData[loop].val) {
-    //     return loop;
-    //   }
-    // }
 
   };
 

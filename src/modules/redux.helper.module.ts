@@ -18,9 +18,15 @@ import {
  * @param dataOfInterest - the data that needs to be checked
  */
 export const updateChecked = (state: ICspState, data: TData, dataOfInterest: string): TCheckboxObject => {
-  const currentObj = state[dataOfInterest][data.index];
+  let currentObj = state[dataOfInterest][data.index];
   let clonedData = cloneDeep(state[dataOfInterest]);
-  clonedData[data.index].checked = !clonedData[data.index].checked;
+
+  if (clonedData && currentObj) {
+    clonedData[data.index].checked = !clonedData[data.index].checked;
+  } else {
+    currentObj = null;
+    clonedData = null;
+  }
 
   return {
     currentObj,
@@ -36,9 +42,15 @@ export const updateChecked = (state: ICspState, data: TData, dataOfInterest: str
  * @param dataOfInterest - the data that needs to be checked
  */
 export const updateUrl = (state: ICspState, data: TUrl, dataOfInterest: string): TUrlObject => {
-  const currentObj = state[dataOfInterest][data.index];
+  let currentObj = state[dataOfInterest][data.index];
   let clonedData = cloneDeep(state[dataOfInterest]);
-  clonedData[data.index] = data.url;
+
+  if (clonedData && currentObj) {
+    clonedData[data.index] = data.url;
+  } else {
+    currentObj = null;
+    clonedData = null;
+  }
 
   return {
     currentObj,
@@ -58,12 +70,18 @@ export const addUrl = (state: ICspState, url: string, dataOfInterest: string): s
   let clonedData = cloneDeep(state[dataOfInterest]);
   let currentLength;
 
-  if (clonedData[0] === '' && url) {
-    currentLength = 0;
+  if (clonedData && url) {
+
+    if (clonedData[0] === '' && url) {
+      currentLength = 0;
+    } else {
+      currentLength = clonedData.length === 0 ? 1 : clonedData.length;
+    }
+    clonedData[currentLength] = url ? url : '';
+
   } else {
-    currentLength = clonedData.length === 0 ? 1 : clonedData.length;
+    clonedData = null;
   }
-  clonedData[currentLength] = url ? url : '';
 
   return clonedData;
 }
@@ -76,9 +94,15 @@ export const addUrl = (state: ICspState, url: string, dataOfInterest: string): s
  * @param dataOfInterest - the data that needs to be checked
  */
 export const deleteUrl = (state: ICspState, data: TUrl, dataOfInterest: string): TUrlObject => {
-  const currentObj = state[dataOfInterest][data.index];
+  let currentObj = state[dataOfInterest][data.index];
   let clonedData = cloneDeep(state[dataOfInterest]);
-  clonedData = clonedData.filter((el: string, i: number) => i !== data.index);
+
+  if (clonedData && currentObj) {
+    clonedData = clonedData.filter((el: string, i: number) => i !== data.index);
+  } else {
+    currentObj = null;
+    clonedData = null;
+  }
 
   return {
     currentObj,
