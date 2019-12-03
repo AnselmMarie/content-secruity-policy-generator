@@ -19,7 +19,7 @@ import ErrRoute from '../../routes/err.route';
 export default (): JSX.Element => {
   return (
     <Switch>
-      <Route exact path="(/|/csp-generator)" component={DefaultRoute} />
+      <Route exact path="/" component={DefaultRoute} />
       <Route exact path="/img-src" component={ImgRoute} />
       <Route exact path="/style-src" component={StyleRoute} />
       <Route exact path="/script-src" component={ScriptRoute} />
@@ -28,6 +28,6 @@ export default (): JSX.Element => {
       <Route exact path="/object-src" component={ObjectRoute} />
       <Route exact path="/generate" component={GenerateRoute} />
       <Route component={ErrRoute} />
-  </Switch>
+    </Switch>
   )
 }

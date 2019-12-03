@@ -2,7 +2,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 /* Component */
 import NavigationComponent from '../../components/navigation.component';
@@ -26,7 +26,7 @@ const store = configureStore();
 export default (): JSX.Element => {
   return (
     <Provider store={store}>
-      <Router>
+      <HashRouter>
         <PageClassComponent>
           <LoaderComponent />
           <aside className="side-area">
@@ -39,7 +39,7 @@ export default (): JSX.Element => {
             </section>
           </main>
         </PageClassComponent>
-      </Router>
+      </HashRouter>
     </Provider>
   );
 }
