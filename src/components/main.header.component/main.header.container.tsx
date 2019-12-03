@@ -61,19 +61,16 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
       }
     });
 
-    this.props.showLoader_AC();
     const inputData = e.target.elements.cspBreakdownTextArea.value;
 
     // If data doesn't exist display error
     if (!inputData) {
-      console.log('MAIN_HEADER.ERROR_MESSAGE_NO_CONTENT', MAIN_HEADER.ERROR_MESSAGE_NO_CONTENT);
       this.setState({
         errorMessage: {
           show: true,
           message: MAIN_HEADER.ERROR_MESSAGE_NO_CONTENT,
         }
       });
-      this.props.hideLoader_AC();
       return;
     }
 
@@ -157,8 +154,6 @@ class MainHeaderContainer extends React.Component<IMainHeaderProps, IMainHeaderS
         }
       });
     }
-
-    this.props.hideLoader_AC();
 
   }
 

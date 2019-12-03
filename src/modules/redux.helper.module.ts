@@ -45,7 +45,7 @@ export const updateUrl = (state: ICspState, data: TUrl, dataOfInterest: string):
   let currentObj = state[dataOfInterest][data.index];
   let clonedData = cloneDeep(state[dataOfInterest]);
 
-  if (clonedData && currentObj) {
+  if (clonedData) {
     clonedData[data.index] = data.url;
   } else {
     currentObj = null;
@@ -61,16 +61,15 @@ export const updateUrl = (state: ICspState, data: TUrl, dataOfInterest: string):
 /**
  * @function addUrl
  * @desc add url content
- * @param state = the current state of this store
+ * @param state - the current state of this store
  * @param url - the url that needs to be added
  * @param dataOfInterest - the data that needs to be checked
  */
 export const addUrl = (state: ICspState, url: string, dataOfInterest: string): string[] => {
-
   let clonedData = cloneDeep(state[dataOfInterest]);
   let currentLength;
 
-  if (clonedData && url) {
+  if (clonedData) {
 
     if (clonedData[0] === '' && url) {
       currentLength = 0;
@@ -82,9 +81,8 @@ export const addUrl = (state: ICspState, url: string, dataOfInterest: string): s
   } else {
     clonedData = null;
   }
-
   return clonedData;
-}
+};
 
 /**
  * @function deleteUrl
@@ -97,7 +95,7 @@ export const deleteUrl = (state: ICspState, data: TUrl, dataOfInterest: string):
   let currentObj = state[dataOfInterest][data.index];
   let clonedData = cloneDeep(state[dataOfInterest]);
 
-  if (clonedData && currentObj) {
+  if (clonedData) {
     clonedData = clonedData.filter((el: string, i: number) => i !== data.index);
   } else {
     currentObj = null;
@@ -108,4 +106,4 @@ export const deleteUrl = (state: ICspState, data: TUrl, dataOfInterest: string):
     currentObj,
     clonedData
   }
-}
+};

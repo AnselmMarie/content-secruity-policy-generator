@@ -10,7 +10,7 @@ export const DEFAULT_DELETE_URL = `${DEFAULT_SRC}_delete_url`;
 export const IMG_SRC = 'img';
 export const IMG_MODIFY_CHECKBOX = `${IMG_SRC}_modify_checkbox`;
 export const IMG_MODIFY_URL = `${IMG_SRC}_modify_url`;
-export const IMG_ADD_EMPTY_URL = `${IMG_SRC}_ADD_EMPTY_URL`;
+export const IMG_ADD_EMPTY_URL = `${IMG_SRC}_add_empty_url`;
 export const IMG_ADD_URL = `${IMG_SRC}_add_url`;
 export const IMG_DELETE_URL = `${IMG_SRC}_delete_url`;
 
