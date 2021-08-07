@@ -1,11 +1,6 @@
 /* Store Content */
-import {
-  SHOW_LOADER,
-} from './loader.constants';
-import {
-  ILoaderState,
-  LoaderActionTypes,
- } from './loader.type';
+import { SHOW_LOADER } from './loader.constants';
+import { ILoaderState, LoaderActionTypes } from './loader.type';
 /* Reducer Content */
 import loaderState from './loader.state';
 
@@ -30,5 +25,4 @@ export default (state = initState, action: LoaderActionTypes): ILoaderState => {
   }
 
   return state;
-
 };

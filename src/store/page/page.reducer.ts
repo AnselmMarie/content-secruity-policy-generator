@@ -1,11 +1,6 @@
 /* Store Content */
-import {
-  CURRENT_PAGE,
-} from './page.constants';
-import {
-  IPageState,
-  PageActionTypes
- } from './page.type';
+import { CURRENT_PAGE } from './page.constants';
+import { IPageState, PageActionTypes } from './page.type';
 /* Reducer Content */
 import pageState from './page.state';
 
@@ -31,5 +26,4 @@ export default (state = initState, action: PageActionTypes): IPageState => {
   }
 
   return state;
-
 };
