@@ -11,21 +11,12 @@ import {
   GLOBAL_CONTENT,
 } from '../../configs/constants/content.constants';
 
-/**
- * @function createMarkup
- * @desc safely set up content to be use as HTML
- */
 const createMarkup = () => {
   return {
     __html: GENERATE_ROUTE.SUB_TITLE,
   };
 };
 
-/**
- * @function Generate View
- * @desc rendering the view for the generate route
- * @param $this - class contents
- */
 export default ($this: any): ReactElement => {
   return (
     <>

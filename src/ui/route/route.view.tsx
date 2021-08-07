@@ -2,15 +2,15 @@
 import React, { ReactElement } from 'react';
 import { Route, Switch } from 'react-router-dom';
 /* Route */
-import DefaultRoute from '../../routes/default.route';
-import ImgRoute from '../../routes/img.route';
-import StyleRoute from '../../routes/style.route';
-import ScriptRoute from '../../routes/script.route';
-import FrameRoute from '../../routes/frame.route';
-import FontRoute from '../../routes/font.route';
-import ObjectRoute from '../../routes/object.route';
-import GenerateRoute from '../../routes/generate.route';
-import ErrRoute from '../../routes/err.route';
+import DefaultRoute from '../../routes/default';
+import ImgRoute from '../../routes/img';
+import StyleRoute from '../../routes/style';
+import ScriptRoute from '../../routes/script';
+import FrameRoute from '../../routes/frame';
+import FontRoute from '../../routes/font';
+import ObjectRoute from '../../routes/object';
+import GenerateRoute from '../../routes/generate';
+import ErrRoute from '../../routes/err';
 
 /**
  * @function Route View

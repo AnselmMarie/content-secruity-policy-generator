@@ -1,18 +1,11 @@
-/* Node Module */
 import React, { ReactElement } from 'react';
-/* Store */
+
 import { DEFAULT_SRC } from '../../store/csp/csp.constants';
-/* Component */
 import GeneralSettingsComponent from '../../ui/general.settings';
 import CustomUrlComponent from '../../ui/custom.urls';
-/* Component Content */
+
 import { IDefaultRouteProps } from './default.type';
 
-/**
- * @function General Settings
- * @desc rendering the view for the default route
- * @param props - global property data
- */
 export default (props: IDefaultRouteProps): ReactElement => {
   return (
     <>

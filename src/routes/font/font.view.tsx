@@ -1,32 +1,30 @@
-/* Node Module */
-import React from 'react';
-/* Store */
-import { STYLE_SRC } from '../../store/csp/csp.constants';
-/* Component */
+import React, { ReactElement } from 'react';
+
+import { FONT_SRC } from '../../store/csp/csp.constants';
 import GeneralSettingsComponent from '../../ui/general.settings';
 import CustomUrlComponent from '../../ui/custom.urls';
-/* Component Content */
-import { IStyleRouteProps } from './style.type';
 
-export default (props: IStyleRouteProps) => {
+import { IFontRouteProps } from './font.type';
+
+export default (props: IFontRouteProps): ReactElement => {
   return (
     <>
       <div className="row">
         <div className="setting-col col-lg-12 col-xl-3">
           <GeneralSettingsComponent
-            type={STYLE_SRC}
+            type={FONT_SRC}
             modifyCheckbox_AC={props.modifyCheckbox_AC}
-            generalData={props.styleGeneral}
+            generalData={props.fontGeneral}
           />
         </div>
 
         <div className="setting-col col-lg-12 col-xl-9">
           <CustomUrlComponent
-            type={STYLE_SRC}
+            type={FONT_SRC}
             addEmptyUrl_AC={props.addEmptyUrl_AC}
             modifyUrl_AC={props.modifyUrl_AC}
             deleteUrl_AC={props.deleteUrl_AC}
-            customData={props.styleCustom}
+            customData={props.fontCustom}
           />
         </div>
       </div>

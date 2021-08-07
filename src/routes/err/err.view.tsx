@@ -1,8 +1,7 @@
-/* Node Module */
 import React from 'react';
-/* Component */
+
 import HeadingComponent from '../../ui/heading';
-/* Config */
+
 import { ERROR_ROUTE } from '../../configs/constants/content.constants';
 
 export default () => {

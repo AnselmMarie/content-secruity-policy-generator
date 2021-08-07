@@ -1,18 +1,10 @@
-/* Node Module */
 import React, { ReactElement } from 'react';
-/* Store */
 import { OBJECT_SRC } from '../../store/csp/csp.constants';
-/* Component */
 import GeneralSettingsComponent from '../../ui/general.settings';
 import CustomUrlComponent from '../../ui/custom.urls';
-/* Component Content */
+
 import { IObjectRouteProps } from './object.type';
 
-/**
- * @function Object View
- * @desc rendering the view for the img route
- * @param props - global property data
- */
 export default (props: IObjectRouteProps): ReactElement => {
   return (
     <>
