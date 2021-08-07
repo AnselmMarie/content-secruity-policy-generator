@@ -1,7 +1,6 @@
 module.exports = {
   entry: {
     main: './src/routes/app.route/index.tsx',
-    // vendor: './src/assets/js/vendor.js',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']

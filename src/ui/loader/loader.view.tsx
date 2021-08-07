@@ -1,5 +1,5 @@
 /* Node Module */
-import React from 'react';
+import React, { ReactElement } from 'react';
 /* Component Content */
 import { TLoaderProps } from './loader.type';
 import './loader.scss';
@@ -9,12 +9,14 @@ import './loader.scss';
  * @desc show/hide loader based on loader store
  * @param props - global property data
  */
-export default (props: TLoaderProps): JSX.Element => {
+export default (props: TLoaderProps): ReactElement => {
   return (
     <>
-      {props.loaderData.isLoaderShown && <div className="loader-bg">
-        <div className="loader"></div>
-      </div>}
+      {props.loaderData.isLoaderShown && (
+        <div className="loader-bg">
+          <div className="loader"></div>
+        </div>
+      )}
     </>
-  )
-}
+  );
+};

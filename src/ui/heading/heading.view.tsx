@@ -1,5 +1,5 @@
 /* Node Module */
-import React from 'react';
+import React, { ReactElement } from 'react';
 /* Component Content */
 import { IProps } from './heading.type';
 
@@ -8,7 +8,7 @@ import { IProps } from './heading.type';
  * @desc Render the correct heading based on property given
  * @param props - props sent from parent component
  */
-const renderHeading = (props: IProps): JSX.Element => {
+const renderHeading = (props: IProps): ReactElement => {
   switch (props.heading) {
     case 'h1':
       return <h1>{props.children}</h1>;
@@ -24,8 +24,8 @@ const renderHeading = (props: IProps): JSX.Element => {
     default:
       return <h6>{props.children}</h6>;
   }
-}
+};
 
-export default (props: IProps): JSX.Element => {
+export default (props: IProps): ReactElement => {
   return renderHeading(props);
 };

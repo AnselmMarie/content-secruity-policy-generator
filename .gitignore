@@ -98,6 +98,7 @@ ios/*
 .expo/*
 npm-debug.*
 .env
+.vscode/*
 .idea/*
 .idea/*.xml
 .idea/*.iml

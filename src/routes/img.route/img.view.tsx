@@ -1,10 +1,10 @@
 /* Node Module */
-import React from 'react';
+import React, { ReactElement } from 'react';
 /* Store */
 import { IMG_SRC } from '../../store/csp/csp.constants';
 /* Component */
-import GeneralSettingsComponent from '../../components/general.settings.component';
-import CustomUrlComponent from '../../components/custom.urls.component';
+import GeneralSettingsComponent from '../../ui/general.settings';
+import CustomUrlComponent from '../../ui/custom.urls';
 /* Component Content */
 import { IImgRouteProps } from './img.type';
 
@@ -13,17 +13,16 @@ import { IImgRouteProps } from './img.type';
  * @desc rendering the view for the img route
  * @param props - global property data
  */
-export default (props: IImgRouteProps): JSX.Element => {
+export default (props: IImgRouteProps): ReactElement => {
   return (
     <>
-
       <div className="row">
-
         <div className="setting-col col-lg-12 col-xl-3">
           <GeneralSettingsComponent
             type={IMG_SRC}
             modifyCheckbox_AC={props.modifyCheckbox_AC}
-            generalData={props.imgGeneral} />
+            generalData={props.imgGeneral}
+          />
         </div>
 
         <div className="setting-col col-lg-12 col-xl-9">
@@ -32,11 +31,10 @@ export default (props: IImgRouteProps): JSX.Element => {
             addEmptyUrl_AC={props.addEmptyUrl_AC}
             modifyUrl_AC={props.modifyUrl_AC}
             deleteUrl_AC={props.deleteUrl_AC}
-            customData={props.imgCustom} />
+            customData={props.imgCustom}
+          />
         </div>
-
       </div>
-
     </>
-  )
-}
+  );
+};

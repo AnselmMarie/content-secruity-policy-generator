@@ -1,15 +1,15 @@
 /* Node Module */
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 /* Component */
-import NavigationComponent from '../../components/navigation.component';
-import RouteComponent from '../../components/route.component';
-import MainHeaderComponent from '../../components/main.header.component';
-import PageClassComponent from '../../components/page.class.component';
-import LoaderComponent from '../../components/loader.component';
+import NavigationComponent from '../../ui/navigation';
+import RouteComponent from '../../ui/route';
+import MainHeaderComponent from '../../ui/main.header';
+import PageClassComponent from '../../ui/page.class';
+import LoaderComponent from '../../ui/loader';
 /* Store */
 import configureStore from '../../store';
 
@@ -23,7 +23,7 @@ const store = configureStore();
  * @function App View
  * @desc render the app view
  */
-export default (): JSX.Element => {
+export default (): ReactElement => {
   return (
     <Provider store={store}>
       <HashRouter>
@@ -42,4 +42,4 @@ export default (): JSX.Element => {
       </HashRouter>
     </Provider>
   );
-}
+};

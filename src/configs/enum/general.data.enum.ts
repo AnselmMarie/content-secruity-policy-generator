@@ -1,10 +1,5 @@
-/* Config */
 import { CSP_CONTENT } from '../../configs/constants/content.constants';
 
-/**
- * @property generalDataEnum
- * @desc Init font data
- */
 const generalDataEnum = [
   {
     name: CSP_CONTENT.NONE,
@@ -33,7 +28,7 @@ const generalDataEnum = [
   {
     name: CSP_CONTENT.UNSAFE_INLINE,
     val: CSP_CONTENT.UNSAFE_INLINE_VAL,
-  }
+  },
 ];
 
 export default generalDataEnum;
